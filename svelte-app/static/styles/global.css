@@ -4,12 +4,18 @@
 
    :root {
     /* Color Variables */
-    --primary-color: #007bff;
-    --background-color: #f8f9fa;
-    --text-color: #333;
-    --link-hover-color: #0056b3;
+    --primary-color: #9900ff;
+    --background-color: #d8d8d8;
+    --text-color: #292929;
+    --link-hover-color: #8e00cf;
 
     /* Font Variables */
+    
+    --font-family: 'Pixelify Sans', sans-serif;
+    --font-optical-sizing: auto;
+    --font-weight: <weight>;
+    --font-style: normal;
+      
     --font-family: 'Arial', sans-serif;
     --font-size-base: 16px;
     --line-height-base: 1.6;
