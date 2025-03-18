@@ -69,4 +69,8 @@ a {
     color: var(--primary-color);
     text-decoration: none;
 }
+img{
+    width:100%;
+    height:auto;
+}
 
