@@ -145,10 +145,10 @@
     <a href="/Mickey17" class="mickey17-link">
     <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
 </a>
-    <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
-    <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
-    <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
-    <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
+    <Card title="A Minecraft Movie" description="blablabla" image="./a_minecraft_movie.jpg"/>
+    <Card title="The Alto Kings" description="blablabla" image="./the_alto_kings.jpg"/>
+    <Card title="The Monkey" description="blablabla" image="./the_monkey.jpg"/>
+    <Card title="Bridget Jones: Mad About the Boy" description="blablabla" image="./bridget_jones.jpg"/>
 </div>
 </div>
 </div>
@@ -197,7 +197,7 @@
         min-height: 80vh; /* Increased to provide more space before cards appear */
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         pointer-events: auto; /* Enable clicks on the content */
         transition: transform 0.5s ease, opacity 0.5s ease;
         will-change: transform, opacity;
@@ -430,7 +430,6 @@
     }
     .content2 h2{
         font-size: 60px;
-        padding-bottom: 20px;
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         transition: text-shadow 0.3s ease, transform 0.3s ease;
         
