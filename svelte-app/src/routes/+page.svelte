@@ -142,7 +142,9 @@
 <h2 class="reveal-text">What's Coming to Theaters This Month</h2>
 </div>
 <div class="cinema-news" bind:this ={movieContainer}>
+    <a href="/Mickey17" class="mickey17-link">
     <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
+</a>
     <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
     <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
     <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
