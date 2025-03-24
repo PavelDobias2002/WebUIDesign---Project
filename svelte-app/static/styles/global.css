@@ -16,8 +16,9 @@
     --font-weight: <weight>;
     --font-style: normal;
       
-    --font-family: 'Arial', sans-serif;
+    --font-family: 'Pixelify Sans', sans-serif;
     --font-size-base: 16px;
+    --heading-size: 100px;
     --line-height-base: 1.6;
 
     /* Spacing Variables */
@@ -52,6 +53,7 @@ body {
    ============================== */
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
+    font-size: var(--heading-size);
     margin-bottom: var(--spacing-small);
 }
 

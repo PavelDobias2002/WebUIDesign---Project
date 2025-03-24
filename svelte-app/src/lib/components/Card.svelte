@@ -2,12 +2,13 @@
     // Props allow customization of card title and description
     export let title = "Card Title";
     export let description = "This is a brief description of the card. ";
+    export let image = "/default-placeholder.jpg";
  </script>
     
-<!-- Card container-->
+<!-- Card1 container-->
 <div class="card">
 <!-- Placeholder image -->
-<img src="/placeholder.jpg" alt="Placeholder">
+ <img src={image} alt={title} class="card-image">
 <!-- Card content-->
 <div class="content">
     <h2>{title}</h2>
@@ -16,65 +17,78 @@
 </div>
 
 
+
 <style>
     /* Card container with smooth hover effects */
     .card {
-        background: white;
-        border-radius: 10px; /* Rounded corners */
-        border: 2px solid #007bff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        overflow: hidden;
-        width: 280px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    position: relative;
+    max-width : 250px;
+    height : 215px;  
+    background-color : #000000;
+    margin : 30px 10px;
+    padding : 20px 15px;
+  
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
     }
 
-    /* Advanced Selector: Direct Child Combinator (>)
-       This ensures that only direct `img` elements inside `.card` get these styles */
     .card > img {
-        width: 100%; /* Responsive width */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 8px 8px 0 0; /* Round only the top corners */
+        position : relative;
+    width : 260px;
+    height : 260px;
+  
+    top : -50%;
+    left: 8px;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+     max-width : 100%;
+    border-radius : 15px;
     }
 
     /* Content Styling: Padding for better spacing */
     .content {
-        padding: 1.5rem;
+        position : relative;
+  top : -140px;
+  padding : 10px 15px;
+  color : #ffffff;
+  text-align : center;
+  
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
     }
 
     /* Title Styling */
     .content h2 {
         font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+       
     }
 
     /* Description Styling */
     .content p {
         font-size: 1rem;
-        color: #555;
     }
-
-    /* Pseudo-Class: Hover Effect
-       Adds a subtle lift when hovering over the card */
     .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        height : 320px;  
+    }
+    .card:hover .content{
+        margin-top : 30px;
+        visibility : visible;
+        opacity : 1;
+        transition-delay: 0.2s;
+       
+    }
+    .card:nth-child(even):hover .content{
+        border: solid 1px rgb(202, 26, 176);
+         border-radius:20px;
+    }
+    .card:nth-child(odd):hover .content{
+        border: solid 1px rgb(26, 202, 111);
+         border-radius:20px;
     }
 
-    /* Pseudo-Element: Adds a thin underline before the card title
-       Creates a subtle decorative effect to enhance UI */
-    .content h2::before {
-        content: "";
-        display: block;
-        width: 40%;
-        height: 2px;
-        background: #007bff;
-        margin: 0 auto 10px auto;
-        transition: width 0.3s ease-in-out;
-    }
 
-    /* When .card is hovered, expand the decorative effect to 80% */
-    .card:hover .content h2::before {
-        width: 80%; /* Expanded width on hover */
-    }
 </style>
