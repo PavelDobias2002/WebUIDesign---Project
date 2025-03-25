@@ -71,7 +71,7 @@
         margin-right: 4rem;
         gap: 4rem;
         display: flex;
-        background-color: black;
+        background-color: rgb(0, 0, 0);
         border-radius: 50px;
         justify-content: center;
         align-items: center;
@@ -85,7 +85,7 @@
         font-family: 'Pixelify Sans';
         font-size: large;
         text-decoration: none;
-        color: white;
+        color: rgb(255, 255, 255);
         font-weight: bold;
         display:inline-block;
         position:relative;
@@ -156,7 +156,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%) scale(0.35);
-        top:-150%;
+        top:-140%;
         z-index: 2;
     }
     
