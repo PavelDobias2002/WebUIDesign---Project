@@ -15,7 +15,7 @@
         if (typeof IntersectionObserver !== 'undefined') {   //intersectionobserver - watches visibility of elements
             const cardOptions = {
                 root: null,
-                rootMargin: '-100px 0px', // observer is triggered when above or bellow 100px
+                rootMargin: '-150px 0px', // observer is triggered when above or bellow 150px
                 threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] //percentages of visibility when the observer is triggered
             };
              const movieOptions = {
@@ -132,6 +132,11 @@
         <Card2 title="Reviews" description="blablabla" image="./reviews_icon.png"/>
     </div>
 </div>
+
+<a href="/" class="suggest-content-link">
+    <div class="suggest-button">
+        <button type="button">Suggest us new content!</button>
+    </div></a>
 
 <div class="parallax-container2">
     <div class="movie-backdrop"></div>
@@ -441,6 +446,24 @@
         grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
         margin-top:10px;
         place-items: center;
+    }
+
+    .suggest-button{
+        position:relative;
+        z-index:10;
+        margin-top: 120px;
+        display:inline-block;
+
+    }
+    .suggest-button button{
+        position: relative;
+        padding: 20px 40px;
+        border:none;
+        font-family: 'Pixelify Sans', sans-serif;
+        text-align: center; 
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        background-color:rgb(14, 14, 14);
+        color:white;
     }
   /*  
     .gallery-container
