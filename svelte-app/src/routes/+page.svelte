@@ -149,10 +149,18 @@
     <a href="/Mickey17" class="mickey17-link">
     <Card title="Mickey 17" description="On a mission to survive the impossible!" image="./Mickey_17.jpg"/>
 </a>
+    <a href="/AMinecraftMovie" class="minecraft-link">
     <Card title="A Minecraft Movie" description="Block by block, adventure awaits!" image="./a_minecraft_movie.jpg"/>
-    <Card title="The Alto Kings" description="Starring legendary Robert De Niro" image="./the_alto_kings.jpg"/>
+</a>
+    <a href="/TheAltoKings" class="altokings-link">
+    <Card title="The Alto Knights" description="Starring legendary Robert De Niro" image="./the_alto_kings.jpg"/>
+    </a>
+    <a href="/TheMonkey" class="monkey-link">
     <Card title="The Monkey" description="Based on Stephen King's 1980 story" image="./the_monkey.jpg"/>
+</a>
+    <a href="/BridgetJones" class="bridget-link">
     <Card title="Bridget Jones: Mad About the Boy" description="She's back!" image="./bridget_jones.jpg"/>
+    </a>
 </div>
 </div>
 </div>

@@ -8,6 +8,7 @@
     --background-color: #2c2c2c;
     --text-color: #e4e4e4;
     --link-hover-color: #8e00cf;
+    --headings-color:white;
 
     /* Font Variables */
     
@@ -66,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     font-size: var(--heading-size);
     margin-bottom: var(--spacing-small);
+    color:var(--headings-color);
 }
 
 /* ==============================
@@ -73,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================== */
 p {
     margin-bottom: var(--spacing-small);
+    color:var(--text-color);
 }
 
 /* ==============================

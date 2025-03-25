@@ -4,39 +4,35 @@
 <div class="overlay"></div>
 <div class="header-container">
     <h1 class="reveal-text">Movie Calendar</h1>
-    <h2 class= "reveal-text">Mickey 17</h2>
+    <h2 class= "reveal-text">The Alto Knights</h2>
 </div>
 
 <div class="movie-container">
 	<div class="image">
-		<img src='/Mickey_17.jpg' alt="Mickey 17 movie poster">
+		<img src='/the_alto_kings.jpg' alt="The Alto Kings movie poster">
 	</div>
 	<div class="title">
-		<h3>Mickey 17</h3>
+		<h3>The Alto Knights</h3>
 	</div>
 	<div class="genre">
 		<h3>genre:</h3>
-		<p>Sci-Fi/Comedy/Drama/Mystery & Thriller</p>
+		<p>Crime/Drama</p>
 	</div>
 	<div class="director">
 		<h3>director:</h3>
-		<p>Bong Joon Ho</p>
+		<p>Barry Levinson</p>
 	</div>
 	<div class="production">
 		<h3>production:</h3>
-		<p>	
-			Plan B Entertainment</p>
-			<p>Offscreen</p>
-			<p>Kate Street Picture Company<p>
-			<p>Domain Entertainment</p>
+		<p>	Winkler Films</p>
 	</div>
 	<div class="cast">
 		<h3>cast:</h3>
-		<p>Robert Pattinson</p>
-		<p>Mark Ruffalo</p>
-		<p>Toni Collette</p>
-		<p>Naomi Ackie</p>
-		<p>Steven Yeun</p>
+		<p>Robert De Niro</p>
+		<p>Debra Messing</p>
+		<p>Cosmo Jarvis</p>
+		<p>Kathrine Narducci</p>
+		<p>Michael Rispoli</p>
 	</div>
 	<div class="cinemasIreland">
 		<h3>Now in theaters!</h3>
@@ -46,11 +42,11 @@
 
 	<div class="description">
 		<h3>Description:</h3>
-		<p>Robert Pattinson, wide-eyed and squeaky-voiced, is Mickey Barnes, who needs to get off-Earth sharpish. In the absence of any discernible skill set, he signs up as an “expendable”, and to be killed over and over again on a colony ship headed to the planet of Niflheim under the authority of monstrous politician and cult leader Kenneth Marshall (Mark Ruffalo) and his wife Ylfa (Toni Collette). All is fine, apart from the dying and being recreated by a “human printer”, and Mickey even strikes up a relationship with security officer Nasha (Naomi Ackie). But then, Mickey no. 17 unexpectedly survives a near-death experience, and gets home to find the new version of himself, Mickey 18, already up and about. It’s a scenario that means death for both, so Mickey must finally develop some wits and try and keep them about him.</p>
+		<p>“The film follows two of New York’s most notorious organized crime bosses, Frank Costello and Vito Genovese, as they vie for control of the city’s streets. Once the best of friends, petty jealousies and a series of betrayals place them on a deadly collision course that will reshape the Mafia (and America) forever.”</p>
 	</div>
 	<div class="trailer">
 		<h3>trailer</h3>
-		<iframe src="https://www.youtube.com/embed/osYpGSz_0i4?si=raKvz4ESw3Wj_jml"></iframe>
+		<iframe src="https://www.youtube.com/embed/1aayuOp0AnE?si=tqPXLA3rEoCbAo-p"></iframe>
 	</div>
 	
 </div>
@@ -93,10 +89,10 @@
 		font-size: 1rem;
 	}
 	.movie-container > div{
-		background-color: rgba(118, 129, 146, 0.6);
+		background-color: rgba(155, 85, 5, 0.6);
 		border-radius:30px;
 		padding:1rem;
-		box-shadow: 0 0 15px rgba(212, 212, 212, 0.3);
+        box-shadow: 0 0 15px rgba(212, 212, 212, 0.3);
 	}
     .movie-container{
         display: grid;
@@ -106,6 +102,7 @@
 		padding:20px;
         width:80%;
         margin:auto;
+		
     }
 
 .image {
@@ -119,7 +116,6 @@
 }
 .title {
 	grid-area: 1 / 4 / 1 / 7;
-
 	
 }
 .genre {
