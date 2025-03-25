@@ -12,7 +12,9 @@
     <div class="news-article">
 
 	    <div class="title">
-		    <h3>Nosferatu hunts your dreams</h3>
+		    
+            <h3>Nosferatu hunts your dreams</h3>
+            
 	    </div>
 	    
         <div class="paragraph">
@@ -33,7 +35,9 @@
     <div class="news-article">
 
 	    <div class="title">
+            <a href="/about">
 		    <h3>Mickey 17 made a splash at the cinemas</h3>
+            </a>
 	    </div>
 	    
         <div class="paragraph">
@@ -52,7 +56,25 @@
     </div>
 
     <div class="news-article">
+	    <div class="title">
+		    <h3>Mickey 17</h3>
+	    </div>
+	    
+        <div class="paragraph">
+            <p>​Bong Joon Ho's latest film, "Mickey 17," is a sci-fi satire starring Robert Pattinson as Mickey Barnes, an expendable crew member on a space colonization mission. In this dystopian future, Earth is plagued by environmental disasters, prompting a mission to colonize Niflheim. Mickey's role involves repeated dangerous tasks, resulting in his death and subsequent reprinting with retained memories. </p>
 
+        </div>
+
+        <div class="date">
+		    <h3>Date:</h3>
+		    <p>25/03/2025</p>
+	    </div>
+        
+        <div class="container">
+
+        </div>
+    </div>
+    <div class="news-article">
 	    <div class="title">
 		    <h3>Mickey 17</h3>
 	    </div>
@@ -92,10 +114,24 @@
         z-index: -1;
     }
 
+    .header-container h1{
+        font-family: 'Pixelify Sans', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        -webkit-text-stroke: 2px yellow;
+        color: transparent;
+        transition: transform 0.3s ease;
+        animation: strokeTransition 2s ease-in-out infinite alternate;
+    }
+
+    
+
     .header-container h2{
         font-family: "Exo 2", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
+        font-size: 5rem;
         font-style: normal;
     }
 
@@ -119,47 +155,34 @@
         
 	}
 	.news-container > div{
-		background-color: rgba(154, 154, 154, 0.6);
+		background-color: rgba(218, 218, 218, 0.6);
+		box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 		border-radius:30px;
-		padding:1rem;
+		padding:1.5rem;
 	}
     .news-container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto auto auto;
-        gap: 15px;
-		padding:10px;
+        gap: 30px;
+		padding:2rem;
         width:80%;
         margin:auto;
-		background-color: rgba(86, 94, 110, 0.6);
-		border-radius:30px;
-		box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     }
 
     .news-article{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
+        border-bottom: 2px solid yellow;
+        transition: all 0.3s ease;
     }
 
-    .news-article::after{
-        content: "";
-            display: block;
-            width: 40%;
-            height: 2px;
-            border-radius: 50px;
-            margin: 0 auto 10px auto;
-            transition: width 0.3s ease-in-out;
-    }
-
-    .news-article::before {
-        content: attr(data-text);
-        position: absolute;
-        overflow:hidden;
-        left:0;
-        width:0;
-        white-space: nowrap;
-        transition:all 0.5s;
+    .news-article:hover {
+        margin-top: 5px;
+        transform: translateY(-10px);
+        border-bottom: 10px solid yellow;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
 .image {
