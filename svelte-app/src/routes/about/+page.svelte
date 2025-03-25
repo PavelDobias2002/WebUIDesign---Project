@@ -6,29 +6,32 @@
     });
 </script>
 
-<div class="bg"></div>
+<div class="overlay"></div>
 <div class="content">
     <h1 class="reveal-text">About...</h1>
     <img src="/logo.png" alt="NoSignalMedia" class="reveal-logo">
 </div>
+<div class="image-container">
+    <img src="/jake-kelly.png" alt="no.1" class="flex-image">
+    <img src="/pavel.png" alt="no.2" class="flex-image">
+    <img src="/eliska.png" alt="no.3" class="flex-image">
+</div>
 
 <style>
     h1{
-        color: white;
+        color: white ;
     }
-    
-    /* Second background (add your preferred background or use the same as home) */
-    .bg {
-        position: fixed; /* Fixed position for the background */
-        width: 100%;
-        height: 100vh;
-        z-index: 0;
+    .overlay {
+        position: fixed;
         top: 0;
         left: 0;
-        background-size: cover;
-        background-position: center;
-        animation: gifs 15s infinite steps(1);
-        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%,
+            rgba(0,0,0,0.4) 60%, 
+            rgba(0,0,0,0.7) 100%);
+        z-index: -1;
     }
 
     .reveal-logo {
@@ -40,6 +43,29 @@
         max-width: 25%;
         height: auto;
         margin: 0px auto 10px;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin: 40px auto;
+        max-width: 1200px;
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+    
+    .flex-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: revealLogo 1.2s forwards ease-out;
+        animation-delay: 0.3s;
+        transition: transform 0.3s ease;
     }
 
     .reveal-text {
@@ -71,19 +97,6 @@
         }
     }
 
-    @keyframes gifs {
-        0%, 12% { 
-            background-image: url('/dexter-show.gif');
-        }
-
-        13%, 20% { 
-            background-image: url('/minecraft.gif');
-        }
-        21%, 30% { 
-            background-image: url('/the-batman.gif');
-        }
-    }    
-    
     @keyframes revealLogo {
         0% {
             opacity: 0;
