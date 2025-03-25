@@ -19,14 +19,16 @@
     
     /* Second background (add your preferred background or use the same as home) */
     .bg {
-        position: fixed;
+        position: fixed; /* Fixed position for the background */
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, 
-            rgb(50, 50, 50) 0%,
-            rgb(0, 0, 0) 100%);
+        background-size: cover;
+        background-position: center;
+        animation: gifs 15s infinite steps(1);
+        overflow: hidden;
     }
 
     .reveal-logo {
@@ -68,6 +70,19 @@
             transform: translateY(0);
         }
     }
+
+    @keyframes gifs {
+        0%, 12% { 
+            background-image: url('/dexter-show.gif');
+        }
+
+        13%, 20% { 
+            background-image: url('/minecraft.gif');
+        }
+        21%, 30% { 
+            background-image: url('/the-batman.gif');
+        }
+    }    
     
     @keyframes revealLogo {
         0% {
