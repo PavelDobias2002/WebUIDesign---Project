@@ -1,0 +1,162 @@
+<script>
+
+</script>
+<div class="overlay"></div>
+<div class="header-container">
+    <h1>News News and more News!</h1>
+    <h2>Mickey 17</h2>
+</div>
+
+<div class="movie-container">
+	<div class="image">
+		<img src='/Mickey_17.jpg' alt="Mickey 17 movie poster">
+	</div>
+	<div class="title">
+		<h3>Mickey 17</h3>
+	</div>
+	<div class="genre">
+		<h3>genre:</h3>
+		<p>Sci-Fi/Comedy/Drama/Mystery & Thriller</p>
+	</div>
+	<div class="director">
+		<h3>director:</h3>
+		<p>Bong Joon Ho</p>
+	</div>
+	<div class="production">
+		<h3>production:</h3>
+		<p>	
+			Plan B Entertainment</p>
+			<p>Offscreen</p>
+			<p>Kate Street Picture Company<p>
+			<p>Domain Entertainment</p>
+	</div>
+	<div class="cast">
+		<h3>cast:</h3>
+		<p>Robert Pattinson</p>
+		<p>Mark Ruffalo</p>
+		<p>Toni Collette</p>
+		<p>Naomi Ackie</p>
+		<p>Steven Yeun</p>
+	</div>
+	<div class="cinemasIreland">
+		<h3>Now in theaters!</h3>
+		<p>Don't miss the opportunity now in any cinema in Ireland!</p>
+	</div>
+
+
+	<div class="description">
+		<h3>Description:</h3>
+		<p>Robert Pattinson, wide-eyed and squeaky-voiced, is Mickey Barnes, who needs to get off-Earth sharpish. In the absence of any discernible skill set, he signs up as an “expendable”, and to be killed over and over again on a colony ship headed to the planet of Niflheim under the authority of monstrous politician and cult leader Kenneth Marshall (Mark Ruffalo) and his wife Ylfa (Toni Collette). All is fine, apart from the dying and being recreated by a “human printer”, and Mickey even strikes up a relationship with security officer Nasha (Naomi Ackie). But then, Mickey no. 17 unexpectedly survives a near-death experience, and gets home to find the new version of himself, Mickey 18, already up and about. It’s a scenario that means death for both, so Mickey must finally develop some wits and try and keep them about him.</p>
+	</div>
+	<div class="trailer">
+		<h3>trailer</h3>
+		<iframe src="https://www.youtube.com/embed/osYpGSz_0i4?si=raKvz4ESw3Wj_jml"></iframe>
+	</div>
+	
+</div>
+
+<style>
+	    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%,
+            rgba(0,0,0,0.4) 60%, 
+            rgba(0,0,0,0.7) 100%);
+        z-index: -1;
+    }
+
+	.movie-container .title h3{
+		font-family: "Exo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3.5rem;
+		color:black;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	
+    .movie-container h3 {
+        font-size: 2rem;
+        color: #252525;
+        text-transform: capitalize;
+    }
+	.movie-container p{
+		font-family: "Exo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+	}
+	.movie-container > div{
+		background-color: rgba(154, 154, 154, 0.6);
+		border-radius:30px;
+		padding:1rem;
+	}
+    .movie-container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto auto auto auto ;
+        gap: 30px;
+		padding:20px;
+        width:80%;
+        margin:auto;
+		background-color: rgba(86, 94, 110, 0.6);
+		border-radius:30px;
+		box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+.image {
+	grid-area: 1 / 1 / 4 / 3; /*row start column start/row end column end*/
+}
+.image img{
+	border-radius: 30px;
+	width:100%;
+	height:100%;
+	object-fit: cover;
+}
+.title {
+	grid-area: 1 / 3 / 1 / 6;
+	
+}
+.genre {
+	grid-area: 2/3/3/4;
+	
+}
+.director {
+	grid-area: 3/3/4/4;
+	height:50%;
+}
+.production {
+	grid-area: 3/4/4/5;
+}
+.cast {
+	grid-area: 2 / 5 / 4 / 6;
+	
+}
+.cast p{
+	margin-bottom:20px;
+}
+.cinemasIreland {
+	grid-area: 2/4/3/5;
+	
+}
+.description {
+	grid-area: 4 / 1 / 7 / 4;
+	
+}
+.trailer {
+	grid-area: 4 / 4 / 7 / 6;
+}
+.trailer iframe {
+        width: 100%;  /* Make the iframe take up the full width of the container */
+		height: 80%;
+        border: none;
+		border-radius: 30px;
+        object-fit: cover; /* Makes the video cover the entire iframe while maintaining aspect ratio */
+    }
+
+</style>
