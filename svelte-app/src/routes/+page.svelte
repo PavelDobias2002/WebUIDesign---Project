@@ -15,7 +15,7 @@
         if (typeof IntersectionObserver !== 'undefined') {   //intersectionobserver - watches visibility of elements
             const cardOptions = {
                 root: null,
-                rootMargin: '-100px 0px', // observer is triggered when above or bellow 100px
+                rootMargin: '-150px 0px', // observer is triggered when above or bellow 150px
                 threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] //percentages of visibility when the observer is triggered
             };
              const movieOptions = {
@@ -133,6 +133,11 @@
     </div>
 </div>
 
+<a href="/" class="suggest-content-link">
+    <div class="suggest-button">
+        <button type="button">Suggest us new content!</button>
+    </div></a>
+
 <div class="parallax-container2">
     <div class="movie-backdrop"></div>
 <div class="movie-calendar">
@@ -144,10 +149,18 @@
     <a href="/Mickey17" class="mickey17-link">
     <Card title="Mickey 17" description="On a mission to survive the impossible!" image="./Mickey_17.jpg"/>
 </a>
+    <a href="/AMinecraftMovie" class="minecraft-link">
     <Card title="A Minecraft Movie" description="Block by block, adventure awaits!" image="./a_minecraft_movie.jpg"/>
-    <Card title="The Alto Kings" description="Starring legendary Robert De Niro" image="./the_alto_kings.jpg"/>
+</a>
+    <a href="/TheAltoKings" class="altokings-link">
+    <Card title="The Alto Knights" description="Starring legendary Robert De Niro" image="./the_alto_kings.jpg"/>
+    </a>
+    <a href="/TheMonkey" class="monkey-link">
     <Card title="The Monkey" description="Based on Stephen King's 1980 story" image="./the_monkey.jpg"/>
+</a>
+    <a href="/BridgetJones" class="bridget-link">
     <Card title="Bridget Jones: Mad About the Boy" description="She's back!" image="./bridget_jones.jpg"/>
+    </a>
 </div>
 </div>
 </div>
@@ -441,6 +454,24 @@
         grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
         margin-top:10px;
         place-items: center;
+    }
+
+    .suggest-button{
+        position:relative;
+        z-index:10;
+        margin-top: 120px;
+        display:inline-block;
+
+    }
+    .suggest-button button{
+        position: relative;
+        padding: 20px 40px;
+        border:none;
+        font-family: 'Pixelify Sans', sans-serif;
+        text-align: center; 
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        background-color:rgb(14, 14, 14);
+        color:white;
     }
   /*  
     .gallery-container
