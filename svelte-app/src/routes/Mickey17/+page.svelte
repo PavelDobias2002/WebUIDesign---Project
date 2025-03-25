@@ -3,8 +3,8 @@
 </script>
 <div class="overlay"></div>
 <div class="header-container">
-    <h1>Movie Calendar</h1>
-    <h2>Mickey 17</h2>
+    <h1 class="reveal-text">Movie Calendar</h1>
+    <h2 class= "reveal-text">Mickey 17</h2>
 </div>
 
 <div class="movie-container">
@@ -68,6 +68,14 @@
             rgba(0,0,0,0.7) 100%);
         z-index: -1;
     }
+	.header-container h1{
+		transition: text-shadow 0.3s ease, transform 0.3s ease;
+        animation-delay: 0.2s;
+	}
+	.header-container h2{
+		transition: text-shadow 0.3s ease, transform 0.3s ease;
+        animation-delay: 0.5s;
+	}
 
 	.movie-container .title h3{
 		font-size: 3.5rem;
@@ -150,6 +158,23 @@
         border: none;
 		border-radius: 30px;
         object-fit: cover; /* Makes the video cover the entire iframe while maintaining aspect ratio */
+    }
+
+	.reveal-text {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: revealText 1s forwards ease-out;
+    }
+
+	@keyframes revealText {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
 </style>

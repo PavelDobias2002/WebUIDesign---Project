@@ -27,6 +27,7 @@
         position: relative;
         width:100%;
         padding-top: 20px;
+        margin:auto;
     
     }
     .nav::before {
