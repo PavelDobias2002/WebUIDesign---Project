@@ -72,7 +72,7 @@
         font-size: 1rem;
     }
     .card:hover {
-        height : 320px;  
+        height : 350px;  
     }
     .card:hover .content{
         margin-top : 30px;

@@ -96,9 +96,9 @@
                     cardMenu.style.transform = 'translateY(0)';
                 }
 
-                const movieMenu = document.querySelector('.cinema-news');
+                const movieMenu = document.querySelector('.movie-calendar');
                 if(movieMenu && scrollY > 100){
-                    const traslateFactor = Math.min((scrollY - 100)*0.12, 60);
+                    const translateFactor = Math.min((scrollY - 100)*0.12, 60);
                     movieMenu.style.transform = `translateY(${-translateFactor}px)`;
                 } else if (movieMenu){
                     movieMenu.style.transform = 'translateY(0)';
@@ -118,7 +118,6 @@
     });
 </script>
 <div class="changing-background2">
-    <div class="overlay"></div>
     <div class="overlay"></div>
 </div>
 <div class="content">
@@ -143,12 +142,12 @@
 </div>
 <div class="cinema-news" bind:this ={movieContainer}>
     <a href="/Mickey17" class="mickey17-link">
-    <Card title="Mickey 17" description="blablabla" image="./Mickey_17.jpg"/>
+    <Card title="Mickey 17" description="On a mission to survive the impossible!" image="./Mickey_17.jpg"/>
 </a>
-    <Card title="A Minecraft Movie" description="blablabla" image="./a_minecraft_movie.jpg"/>
-    <Card title="The Alto Kings" description="blablabla" image="./the_alto_kings.jpg"/>
-    <Card title="The Monkey" description="blablabla" image="./the_monkey.jpg"/>
-    <Card title="Bridget Jones: Mad About the Boy" description="blablabla" image="./bridget_jones.jpg"/>
+    <Card title="A Minecraft Movie" description="Block by block, adventure awaits!" image="./a_minecraft_movie.jpg"/>
+    <Card title="The Alto Kings" description="Starring legendary Robert De Niro" image="./the_alto_kings.jpg"/>
+    <Card title="The Monkey" description="Based on Stephen King's 1980 story" image="./the_monkey.jpg"/>
+    <Card title="Bridget Jones: Mad About the Boy" description="She's back!" image="./bridget_jones.jpg"/>
 </div>
 </div>
 </div>
@@ -194,7 +193,7 @@
         padding: 4rem 2rem;
         max-width: 1200px;
         margin: 0 auto;
-        min-height: 80vh; /* Increased to provide more space before cards appear */
+        min-height: 60vh; /* Increased to provide more space before cards appear */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
