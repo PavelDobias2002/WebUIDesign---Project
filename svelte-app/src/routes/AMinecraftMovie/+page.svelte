@@ -90,7 +90,7 @@
         text-transform: capitalize;
     }
 	.movie-container p{
-		font-size: 1rem;
+		font-size: 0.9rem;
 	}
 	.movie-container > div{
 		background-color: rgba(104, 165, 106, 0.6);

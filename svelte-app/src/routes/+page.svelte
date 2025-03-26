@@ -8,6 +8,7 @@
 
     let movieContainer;
     let movies = [];
+    
     onMount(() => {
         console.log("home page loaded");
         
@@ -122,21 +123,31 @@
 </div>
 <div class="content">
     <h1 class="reveal-text">No Signal Media</h1>
-    <p class="reveal-text"> some cool fance text about our website, what we do etc</p>   
+    <p class="reveal-text"> Lights, Camera, Action! Dive into the world of movies with our unique approach towards it. Get the latest updates, breaking news, and expert reviews on all the films you need to see. Whether you're a die-hard movie buff or just looking for the next great watch, we've got you covered</p>   
 </div>
 <div class="parallax-container">
     <div class="card-backdrop"></div>
     <div class="card-menu" bind:this={cardContainer}>
-        <Card2 title="News" description="What's new?" image="./news_icon.png"/>
-        <Card2 title="Articles" description="blablablabla" image="./articles_icon.png"/>
-        <Card2 title="Reviews" description="blablabla" image="./reviews_icon.png"/>
+        <Card2 title="News" description="Real talk on what’s hot (and what’s not)!" image="./news_icon.png"/>
+        <Card2 title="Articles" description="Dive into fun reads with fresh takes." image="./articles_icon.png"/>
+        <Card2 title="Reviews" description="Stay in the loop with the latest buzz!" image="./reviews_icon.png"/>
     </div>
 </div>
 
-<a href="/" class="suggest-content-link">
+<div class="suggest-content-container">
     <div class="suggest-button">
-        <button type="button">Suggest us new content!</button>
-    </div></a>
+        <a href="/suggestContent">
+        <button type="button">
+            <h3>Suggest us new content!</h3>
+            <span class="arrow-icon">▼</span>
+            <div class="expanded-content">
+                <p>Have ideas for articles, reviews, or news stories you'd like to see on our site? 
+                Let us know what content you're interested in, and our team will consider your suggestions for future publications!</p>
+            </div>
+        </button>
+    </a>
+    </div>
+</div>
 
 <div class="parallax-container2">
     <div class="movie-backdrop"></div>
@@ -186,20 +197,22 @@
         overflow: hidden;
     }
     
-    .content{
-        position: relative;
-        z-index: 3; /* Increased z-index to be above background */
-        padding: 4rem 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        min-height: 80vh; /* Increased to provide more space before cards appear */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        pointer-events: auto; /* Enable clicks on the content */
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        will-change: transform, opacity;
-    }
+    .content {
+    position: relative;
+    z-index: 3;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    will-change: transform, opacity;
+}
     .content2{
         position: relative;
         z-index: 3; /* Increased z-index to be above background */
@@ -250,6 +263,7 @@
     
     .content p {
         animation-delay: 0.5s;
+        font-size: 1.5rem;
     }
 
 .content2 h2:first-child {
@@ -326,6 +340,7 @@
         padding: 3rem 0;
         overflow: visible; /* Allow content to be visible outside container */
         margin-top: -20vh; /* Adjusted to start appearing as you scroll down */
+        margin-bottom: 15vh;
         transition: transform 0.8s ease-in-out;
         will-change: transform;
         min-height: 50vh; /* Ensure enough height for scrolling effect */
@@ -335,7 +350,7 @@
         z-index: 5; /* Lower z-index so it appears between content and movie-calendar */
         padding: 3rem 0;
         overflow: visible; /* Allow content to be visible outside container */
-        margin-top: 20vh;
+        margin-top: 15vh;
         transition: transform 0.8s ease-in-out;
         will-change: transform;
         min-height: 50vh; /* Ensure enough height for scrolling effect */
@@ -461,17 +476,116 @@
         z-index:10;
         margin-top: 120px;
         display:inline-block;
-
+        transition: transform 0.5s ease-out;
+        width:80%;
     }
     .suggest-button button{
         position: relative;
-        padding: 20px 40px;
+        padding: 22px 48px;
         border:none;
+        border-radius: 30px;
         font-family: 'Pixelify Sans', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 1px;
         text-align: center; 
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-        background-color:rgb(14, 14, 14);
+        box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+        background: linear-gradient(135deg,  #000000, #3c3c3c);
         color:white;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+    .suggest-button button:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: 0.5s ease-in-out;
+    }
+    
+    .suggest-button:hover {
+        transform: translateY(-15px);
+    }
+    
+    .suggest-button button:hover {
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.6);
+        transform: scale(1.05);
+        background: linear-gradient(135deg, #000000, #3c3c3c); /*reverse the gradient*/
+        }
+    
+    .suggest-button button:hover:before {
+        left: 100%; /* gradient shines across the button*/
+        animation: shine 1.5s infinite;
+    }
+    
+    @keyframes shine {
+        0% {
+            left: -100%;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+    
+    /* styles for the expandable content */
+    .suggest-content-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        z-index: 15;
+    }
+    
+    .suggest-button {
+        transition: margin-bottom 0.3s ease;
+    }
+    
+    .suggest-button:hover {
+        margin-bottom: 20px;
+    }
+    
+    .arrow-icon {
+        display: inline-block;
+        margin-left: 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .suggest-button:hover .arrow-icon { /*arrow icon flips*/
+        transform: rotate(180deg);
+    }
+    
+    .expanded-content { /*invisible unless i hover on the button*/
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
+        opacity: 0;
+        border-radius: 30px;
+        margin-top: 10px;
+        padding: 0 20px;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        pointer-events: none;
+    }
+    
+    .suggest-button:hover .expanded-content { /*becomes visible*/
+        max-height: 300px;
+        opacity: 1;
+        padding: 20px;
+        pointer-events: auto;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .expanded-content p {
+        color: white;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        text-align: center;
     }
   /*  
     .gallery-container
