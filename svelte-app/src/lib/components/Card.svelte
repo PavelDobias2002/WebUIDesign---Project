@@ -55,7 +55,6 @@
   padding : 10px 15px;
   color : #ffffff;
   text-align : center;
-  
   visibility : hidden;
   opacity : 0;
   transition : 0.3s ease-in-out;
