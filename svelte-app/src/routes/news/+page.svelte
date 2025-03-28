@@ -1,24 +1,24 @@
 <script>
 
 </script>
-<div class="overlay"></div>
-<div class="header-container">
+<div class="overlay"></div> <!--Overlay over the page background creating subtle gradient-->
+<div class="header-container">  <!--Header with titles-->
     <h1>News News and more News!</h1>
     <h2>From Cinema to your screen.</h2>
 </div>
 
-<div class="news-container">
+<div class="news-container">    <!--Container containing all the news articles-->
 	
-    <div class="news-article">
+    <div class="news-article">  <!--div for each article -->
         
-        <div class="title">
+        <div class="title"> <!--Left side of the div with titles-->
 		    <a href="/newsArticle">
             <h3>Nosferatu</h3>
             <h4>Spongebobs favourite vampire</h4>
             </a>
 	    </div>
 	    
-        <div class="paragraph">
+        <div class="paragraph"> <!--Middle section for description of the news-->
             <a href="/newsArticle">
             <p>The new adaptaion of legendary Vampire is set to be an amazing watch. <br>
             The adaptaion of old and classic Nosferatu hit the theaters a while back. We wanted to look at the impact this old school vampire had on audiences. <br>
@@ -26,13 +26,15 @@
             </a>
         </div>
 
-        <div class="date">
+        <div class="date">  <!-- date and editor info on the right -->
 		    <h3>Date:</h3>
 		    <p>25/03/2025</p>
             <h3>Editor:</h3>
             <p>Pavel Dobias</p>
 	    </div>
     </div>
+
+    <!-- This layout is used for each news article div-->
 
     <div class="news-article">
 
@@ -120,7 +122,7 @@
 
 
 <style>
-	    .overlay {
+	    .overlay {  /*the gradient on the page background*/
         position: fixed;
         top: 0;
         left: 0;
@@ -133,7 +135,7 @@
         z-index: -1;
     }
 
-    .header-container h1{
+    .header-container h1{   /*Style for the main heading*/
         font-family: 'Pixelify Sans', sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
@@ -146,7 +148,7 @@
 
     
 
-    .header-container h2{
+    .header-container h2{ /*style for sub heading*/
         font-family: "Exo 2", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
@@ -155,7 +157,7 @@
         border-bottom: 4px solid yellow;
     }
 
-	.news-container h3{
+	.news-container h3{ /*Style for heading within the news article divs*/
 		font-family: "Exo 2", sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
@@ -168,7 +170,7 @@
 		text-transform: uppercase;
 	}
 
-    .news-container h4{
+    .news-container h4{ /*Style for heading within the news article divs*/
 		font-family: "Exo 2", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
@@ -178,7 +180,7 @@
 		
 	}
 	
-	.news-container p{
+	.news-container p{ /*Style for paragraphs within the news article divs*/
 		font-family: "Exo 2", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
@@ -187,12 +189,12 @@
 
         
 	}
-	.news-container > div{
+	.news-container > div{ /*referfers to each div that is within the news container*/
 		background-color: rgba(16, 16, 16, 0.6);
 		border-radius:30px;
 		padding:1.5rem;
 	}
-    .news-container{
+    .news-container{    /*the grid system used for the news container*/
         display: grid;
         grid-template-columns: repeat(1, 1fr); 
         grid-template-rows: auto auto auto;
@@ -203,7 +205,7 @@
         margin:auto;
     }
 
-    .news-article{
+    .news-article{ /*grid system for the news articles*/
         display: grid;
         grid-template-columns: 2fr 4fr 1fr;
         gap: 1.5rem;
@@ -212,7 +214,7 @@
         transition: all 0.3s ease;
     }
 
-    .news-article:hover {
+    .news-article:hover {   /*When hover on the article it goes up to emphasize clickability*/
         margin-top: 5px;
         transform: translateY(-10px);
         border-bottom: 10px solid yellow;
@@ -228,8 +230,10 @@
 	height:100%;
 	object-fit: cover;
 }
+
+/*where the elements of the news article are within the div*/
 .title {
-	grid-area: 1 / 1 / 1 / 2;
+	grid-area: 1 / 1 / 1 / 2; /*row-start/ column-start/ row-end/ column-end/;*/
     border-right: 2px solid rgba(62, 62, 62, 0.3);
     padding-right: 1rem;
     text-align: left;

@@ -1,10 +1,10 @@
-<div class="overlay"></div>
-<div class="header-container">
+<div class="overlay"></div> <!--Overlay over the page background creating subtle gradient-->
+<div class="header-container"> <!--Header with titles-->
     <h2>Nosferatu</h2>
     <h3>Spongebobs favourite vampire</h3>
 </div>
 
-<div class="body-container">
+<div class="body-container"> <!--Contaier of the news article body-->
     <p>
         The new adaptaion of legendary Vampire is set to be an amazing watch. <br>
             The adaptaion of old and classic Nosferatu hit the theaters a while back. We wanted to look at the impact this old school vampire had on audiences. <br>
@@ -14,7 +14,7 @@
 
 
 <style>
-	    .overlay {
+	    .overlay { /*the gradient on the page background*/
         position: fixed;
         top: 0;
         left: 0;
