@@ -5,11 +5,49 @@
 </div>
 
 <div class="body-container"> <!--Contaier of the news article body-->
-    <p>
+    
+    <p class="paragraph">
         The new adaptaion of legendary Vampire is set to be an amazing watch. <br>
             The adaptaion of old and classic Nosferatu hit the theaters a while back. We wanted to look at the impact this old school vampire had on audiences. <br>
-            Did he pierced the audiances necks or was his frenzy bloodless? Find out more...
+            Did he pierced the audiances necks or was his frenzy bloodless? Find out more about the impact Nosferatu had on our childhoods.
     </p>
+
+    <img class="image" src='/nosferatu.png' alt="image of nosferatu from Spongebob episode">
+
+    <p class="paragraph2">
+        The Nosferatu frenzy took to the streets and we had to ask the fans what they think, in our Nosferatu Review we took the nostalgia as a factor in people perception of this movie. <br>
+        Our team thinks this is a news worthy topic, shaping the brains of children to have this imprinted version of Nosferatu iconic design. The author thanked himself to the creator of Spongebob for making Nosferatu into cult classic.
+    </p>
+
+    <h2 class="title">
+        Horror as a children favourite genre?
+    </h2>
+    
+    <p class="paragraph3">
+        It has been shown that younger kids enjoy horror, and a children horror books has been a popular trend for few years now. Even the Warhammer universe, arguably one of the most depressing ones out there, has quite good children books. <br>
+
+    </p>
+
+    <img class ="image2" src='/chrstimasshorror.png' alt="image of nightmare before christmass movie">  
+
+    <p class="paragraph4">
+        We can go back as legendary as Tim Burtons The Nightamere Before Christmass, a movie targeting kids with its whipsicl animation and art style. But as many know having horror themes and adult centeret content.
+    </p>
+
+    <h2 class="title2">
+        Other News
+    </h2>
+
+    <nav class="news-nav">
+        <ul>
+            <li><a href="/newsArticle">Writers Strike</a></li>
+            <li><a href="/newsArticle">Writers Strike</a></li>
+            <li><a href="/newsArticle">Writers Strike</a></li>
+            <li><a href="/newsArticle">Writers Strike</a></li>
+            <li><a href="/newsArticle">Writers Strike</a></li>
+        </ul>
+    </nav>
+
 </div>
 
 
@@ -54,90 +92,102 @@
         
     }
 
-	.news-container h3{
+	.body-container h2{
 		font-family: "Exo 2", sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
-        font-size: 2rem;
+        font-size: 1.5rem;
 
         border-bottom: 2px solid yellow;
 		
 		letter-spacing: 2px;
-		text-transform: uppercase;
-	}
-
-    .news-container h4{
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.5rem;
-		
-		
 	}
 	
-	.news-container p{
+	.body-container p{
 		font-family: "Exo 2", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
         font-style: normal;
         font-size: 1.25rem;
+        text-align: left;
+    }
 
-        
-	}
-	.news-container > div{
-		background-color: rgba(16, 16, 16, 0.6);
-		border-radius:30px;
-		padding:1.5rem;
-	}
-    .news-container{
+    .body-container{
         display: grid;
-        grid-template-columns: repeat(1, 1fr); 
-        grid-template-rows: auto auto auto;
-        gap: 2rem;
-		padding:2rem;
-        width:80%;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(1, 1fr);
+        gap: 1rem;
+        width:100%;
         max-width: 1600px;
         margin:auto;
     }
 
-    .news-article{
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        gap: 1.5rem;
-        border-bottom: 3px solid yellow;
-        border-left: 3px solid yellow;
-        transition: all 0.3s ease;
-    }
-
-    .news-article:hover {
-        margin-top: 5px;
-        transform: translateY(-10px);
-        border-bottom: 10px solid yellow;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-.image {
-	grid-area: 1 / 1 / 1/ 1; /*row start column start/row end column end*/
-}
 .image img{
 	border-radius: 10px;
 	width:100%;
 	height:100%;
 	object-fit: cover;
 }
+
+.image {
+	grid-area: 1 / 2 / 2/ 2; /*row start column start/row end column end*/
+}
+
+.image2{
+    grid-area: 5 / 1/ 5/ 1;
+}
+
 .title {
-	grid-area: 1 / 1 / 1 / 1;
+	grid-area: 4 / 1 / 3 / 3;
+    text-align: left;
+	
+}
+
+.title2 {
+	grid-area: 6 / 1 / 6 / 3;
     text-align: left;
 	
 }
 
 .paragraph{
-    grid-area: 2 / 1 / 10 / 3;
-    padding: 0 1rem;
+    grid-area: 1 / 1 / 1 / 1;
     text-align: left;
 }
+
+.paragraph2{
+    grid-area: 2 / 1 / 2 / 3
+}
+
+.paragraph3{
+    grid-area: 4 / 1 / 4 / 3
+}
+
+.news-nav{
+    display: flex;
+    text-align: left;
+    grid-area: 7 / 1 / 7 / 3
+}
+
+.news-nav ul{
+    display: flex;
+    gap: 1rem;
+    text-align: left;
+}
+
+.news-nav ul li{
+    list-style-type: none;
+    padding: 0.5rem;
+    border-left: 2px solid yellow;
+    text-align: center;
+}
+
+.news-nav ul li:hover{
+    transform: scale(1.050);
+}
+
+
+
 
 .date {
 	grid-area: 2 / 3 / 2 / 3;
