@@ -76,9 +76,9 @@
                     // Adjust content position and opacity based on scroll
                     if (scrollY > 50) {
                         content.style.transform = `translateY(${scrollY * 0.03}px)`; // slower when i scroll past 50px (every 10px it moves down by 3px)
-                        content.style.opacity = Math.max(1 - scrollY / 500, 0.1); /* Fade out a bit faster, opacity increases as i scroll, but is at least 0.1 */
+                        content.style.opacity = Math.max(1 - scrollY / 500, 1); /* Fade out a bit faster, opacity increases as i scroll, but is at least 0.1 */
                         content2.style.transform = `translateY(${scrollY * 0.03}px)`; // slower when i scroll past 50px
-                        content2.style.opacity = Math.max(1 - scrollY / 500, 0.1); /* Fade out a bit faster */
+                        content2.style.opacity = Math.max(1 - scrollY / 500, 1); /* Fade out a bit faster */
                     } else {
                         //initial state
                         content.style.transform = 'translateY(0)'; //when the scroll pos is very low it doesnt fade or move
