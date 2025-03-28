@@ -111,34 +111,34 @@
     }
     /*evry link has its own color*/
     .link-news::before {
-        color: #f9f225;
+        color: var(--news-color);
     }
     .link-news::after {
-        background-color: #f9f225;
+        background-color: var(--news-color);
     }
     
     
     .link-articles::before {
-        color: #2eebdb;
+        color: var(--articles-color);
     }
     .link-articles::after {
-        background-color: #2eebdb;
+        background-color:var(--articles-color);
     }
     
     
     .link-reviews::before {
-        color: #f31313;
+        color: var(--reviews-color);
     }
     .link-reviews::after {
-        background-color: #f31313;
+        background-color: var(--reviews-color);
     }
     
     
     .link-about::before {
-        color: #3c1af8;
+        color: var(--about-color);
     }
     .link-about::after {
-        background-color: #3c1af8;
+        background-color:var(--about-color);
     }
     
     

@@ -150,10 +150,15 @@
 }
 .trailer {
 	grid-area: 4 / 5 / 7 / 7;
+	overflow:hidden;
+	position:relative;
 }
 .trailer iframe {
         width: 100%;  /* Make the iframe take up the full width of the container */
-		height: 80%;
+		height: 100%;
+		position:absolute;
+		top:0;
+		left:0;
         border: none;
 		border-radius: 30px;
         object-fit: cover; /* Makes the video cover the entire iframe while maintaining aspect ratio */

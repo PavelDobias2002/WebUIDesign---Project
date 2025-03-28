@@ -179,9 +179,6 @@
 
 <style>
   
-    h1,p{
-        color:white;
-    }
 
     /* Second background (GIF animation) */
     .changing-background2 {
@@ -444,7 +441,7 @@
         background-color:rgb(214, 86, 80);
     }
     .movie-calendar{
-        background-color:rgba(255, 255, 255);
+        background-color:rgba(255, 255, 255, 0.2);
         border-radius:50px;
         position: relative;
         z-index: 10; /* Higher z-index to appear above the cards */
