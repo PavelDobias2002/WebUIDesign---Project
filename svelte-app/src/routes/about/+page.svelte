@@ -102,7 +102,6 @@
         font-size: 120px;
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         transition: text-shadow 0.3s ease, transform 0.3s ease;
-        animation-delay: 0.2s;
     }
 
     .content h1:hover {
