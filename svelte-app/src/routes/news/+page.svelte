@@ -10,21 +10,49 @@
 <div class="news-container">
 	
     <div class="news-article">
+        
+        <div class="title">
+		    <a href="/newsArticle">
+            <h3>Nosferatu</h3>
+            <h4>Spongebobs favourite vampire</h4>
+            </a>
+	    </div>
+	    
+        <div class="paragraph">
+            <a href="/newsArticle">
+            <p>The new adaptaion of legendary Vampire is set to be an amazing watch. <br>
+            The adaptaion of old and classic Nosferatu hit the theaters a while back. We wanted to look at the impact this old school vampire had on audiences. <br>
+            Did he pierced the audiances necks or was his frenzy bloodless? Find out more...</p>
+            </a>
+        </div>
+
+        <div class="date">
+		    <h3>Date:</h3>
+		    <p>25/03/2025</p>
+            <h3>Editor:</h3>
+            <p>Pavel Dobias</p>
+	    </div>
+    </div>
+
+    <div class="news-article">
 
 	    <div class="title">
 		    
-            <h3>Nosferatu hunts your dreams</h3>
+            <h3>Writers Strike!</h3>
+            <h4>Another dent in Hollywoods trails</h4>
             
 	    </div>
 	    
         <div class="paragraph">
-            <p>The new adaptaion of legendary Vampire is set to be an amazing watch for you and your family.</p>
+            <p>After the cuts, writers hit the streets and...</p>
 
         </div>
 
         <div class="date">
 		    <h3>Date:</h3>
 		    <p>25/03/2025</p>
+            <h3>Editor:</h3>
+            <p>Pavel Dobias</p>
 	    </div>
         
         <div class="container">
@@ -36,7 +64,8 @@
 
 	    <div class="title">
             <a href="/about">
-		    <h3>Mickey 17 made a splash at the cinemas</h3>
+		    <h3>Mickey 17</h3>
+            <h4>Weird movie</h4>
             </a>
 	    </div>
 	    
@@ -48,6 +77,8 @@
         <div class="date">
 		    <h3>Date:</h3>
 		    <p>25/03/2025</p>
+            <h3>Editor:</h3>
+            <p>Pavel Dobias</p>
 	    </div>
         
         <div class="container">
@@ -57,36 +88,24 @@
 
     <div class="news-article">
 	    <div class="title">
-		    <h3>Mickey 17</h3>
+		    <h3>Minecraft Flop?</h3>
+            <h4>The movie adaptation of beloved game causing waves.</h4>
 	    </div>
 	    
         <div class="paragraph">
-            <p>​Bong Joon Ho's latest film, "Mickey 17," is a sci-fi satire starring Robert Pattinson as Mickey Barnes, an expendable crew member on a space colonization mission. In this dystopian future, Earth is plagued by environmental disasters, prompting a mission to colonize Niflheim. Mickey's role involves repeated dangerous tasks, resulting in his death and subsequent reprinting with retained memories. </p>
+            <p>
+                The first trailer of upcoming Minecraft Movie left a fans of the series questing the decisions made by the studio.<br>
+                The backlog of amazing Minecraft animations makes the fans to come to one conclussion: "Why isnt the movie animated?"<br>
+                Find out more...
+            </p>
 
         </div>
 
         <div class="date">
 		    <h3>Date:</h3>
 		    <p>25/03/2025</p>
-	    </div>
-        
-        <div class="container">
-
-        </div>
-    </div>
-    <div class="news-article">
-	    <div class="title">
-		    <h3>Mickey 17</h3>
-	    </div>
-	    
-        <div class="paragraph">
-            <p>​Bong Joon Ho's latest film, "Mickey 17," is a sci-fi satire starring Robert Pattinson as Mickey Barnes, an expendable crew member on a space colonization mission. In this dystopian future, Earth is plagued by environmental disasters, prompting a mission to colonize Niflheim. Mickey's role involves repeated dangerous tasks, resulting in his death and subsequent reprinting with retained memories. </p>
-
-        </div>
-
-        <div class="date">
-		    <h3>Date:</h3>
-		    <p>25/03/2025</p>
+            <h3>Editor:</h3>
+            <p>Pavel Dobias</p>
 	    </div>
         
         <div class="container">
@@ -133,6 +152,7 @@
         font-weight: 500;
         font-size: 5rem;
         font-style: normal;
+        border-bottom: 4px solid yellow;
     }
 
 	.news-container h3{
@@ -141,9 +161,21 @@
         font-weight: 700;
         font-style: normal;
         font-size: 2rem;
-		color:black;
+
+        border-bottom: 2px solid yellow;
+		
 		letter-spacing: 2px;
 		text-transform: uppercase;
+	}
+
+    .news-container h4{
+		font-family: "Exo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.5rem;
+		
+		
 	}
 	
 	.news-container p{
@@ -151,30 +183,32 @@
         font-optical-sizing: auto;
         font-weight: 500;
         font-style: normal;
+        font-size: 1.25rem;
 
         
 	}
 	.news-container > div{
-		background-color: rgba(218, 218, 218, 0.6);
-		box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+		background-color: rgba(16, 16, 16, 0.6);
 		border-radius:30px;
 		padding:1.5rem;
 	}
     .news-container{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr); 
         grid-template-rows: auto auto auto;
-        gap: 30px;
+        gap: 2rem;
 		padding:2rem;
         width:80%;
+        max-width: 1600px;
         margin:auto;
     }
 
     .news-article{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        border-bottom: 2px solid yellow;
+        grid-template-columns: 2fr 4fr 1fr;
+        gap: 1.5rem;
+        border-bottom: 3px solid yellow;
+        border-left: 3px solid yellow;
         transition: all 0.3s ease;
     }
 
@@ -196,15 +230,23 @@
 }
 .title {
 	grid-area: 1 / 1 / 1 / 2;
+    border-right: 2px solid rgba(62, 62, 62, 0.3);
+    padding-right: 1rem;
+    text-align: left;
 	
 }
 
 .paragraph{
     grid-area: 1 / 2 / 1 / 2;
+    padding: 0 1rem;
+    text-align: left;
 }
 
 .date {
 	grid-area: 1 / 3 / 1 / 3;
+    text-align: right;
+    border-left: 2px solid rgba(62, 62, 62, 0.3);
+    padding-left: 1rem;
 }
 
 .container{
