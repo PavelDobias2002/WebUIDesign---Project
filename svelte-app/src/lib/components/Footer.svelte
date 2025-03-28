@@ -9,7 +9,8 @@
         color: white;
         text-align: center;
         padding: 1rem;
-        position: fixed;
+        position: relative;
+        margin-top: 1.5rem;
         bottom: 0;
         width: 100%;
     }
