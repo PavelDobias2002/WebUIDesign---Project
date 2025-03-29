@@ -140,7 +140,7 @@
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
-        -webkit-text-stroke: 2px yellow;
+        -webkit-text-stroke: 2px var(--news-color);
         color: transparent;
         transition: transform 0.3s ease;
         animation: strokeTransition 2s ease-in-out infinite alternate;
@@ -154,7 +154,7 @@
         font-weight: 500;
         font-size: 4rem;
         font-style: normal;
-        border-bottom: 4px solid yellow;
+        border-bottom: 4px solid var(--news-color);
     }
 
 	.news-container h3{ /*Style for heading within the news article divs*/
@@ -164,7 +164,7 @@
         font-style: normal;
         font-size: 2rem;
 
-        border-bottom: 2px solid yellow;
+        border-bottom: 2px solid var(--news-color);
 		
 		letter-spacing: 2px;
 		text-transform: uppercase;
@@ -209,15 +209,15 @@
         display: grid;
         grid-template-columns: 2fr 4fr 1fr;
         gap: 1.5rem;
-        border-bottom: 3px solid yellow;
-        border-left: 3px solid yellow;
+        border-bottom: 3px solid var(--news-color);
+        border-left: 3px solid var(--news-color);
         transition: all 0.3s ease;
     }
 
     .news-article:hover {   /*When hover on the article it goes up to emphasize clickability*/
         margin-top: 5px;
         transform: translateY(-10px);
-        border-bottom: 10px solid yellow;
+        border-bottom: 10px solid var(--news-color);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 

@@ -28,10 +28,12 @@
 
     </p>
 
-    <img class ="image2" src='/chrstimasshorror.png' alt="image of nightmare before christmass movie">  
+    <img class ="image2" src='/nigthmare.jpg' alt="image of nightmare before christmass movie">  
 
     <p class="paragraph4">
-        We can go back as legendary as Tim Burtons The Nightamere Before Christmass, a movie targeting kids with its whipsicl animation and art style. But as many know having horror themes and adult centeret content.
+        We can go back as legendary as Tim Burtons The Nightamere Before Christmass, a movie targeting kids with its whipsicl animation and art style. But as many know having horror themes and adult centeret content. While marketed as a family-friendly film, The Nightmare Before Christmas incorporates various horror elements that might not be immediately apparent to young viewers. The character Oogie Boogie, for example, is a literal boogeyman composed of living bugs, an image that can be deeply unsettling. The themes of death, the afterlife, and existential crisis—particularly Jack’s longing for purpose—resonate more profoundly with older audiences.
+
+        Even the film’s musical numbers, composed by Danny Elfman, carry eerie undertones. Songs like “This Is Halloween” celebrate the thrills of fright, while “Oogie Boogie’s Song” introduces a sadistic gambling villain. These moments contribute to the film’s spooky atmosphere while still remaining accessible to children.
     </p>
 
     <h2 class="title2">
@@ -78,7 +80,7 @@
         font-weight: 500;
         font-size: 5rem;
         font-style: normal;
-        border-bottom: 4px solid yellow;
+        border-bottom: 4px solid var(--news-color);
         text-align: left;
     }
 
@@ -99,7 +101,7 @@
         font-style: normal;
         font-size: 1.5rem;
 
-        border-bottom: 2px solid yellow;
+        border-bottom: 2px solid var(--news-color);
 		
 		letter-spacing: 2px;
 	}
@@ -123,12 +125,7 @@
         margin:auto;
     }
 
-.image img{
-	border-radius: 10px;
-	width:100%;
-	height:100%;
-	object-fit: cover;
-}
+
 
 .image {
 	grid-area: 1 / 2 / 2/ 2; /*row start column start/row end column end*/
@@ -178,7 +175,7 @@
 .news-nav ul li{
     list-style-type: none;
     padding: 0.5rem;
-    border-left: 2px solid yellow;
+    border-left: 2px solid var(--news-color);
     text-align: center;
 }
 
@@ -186,15 +183,6 @@
     transform: scale(1.050);
 }
 
-
-
-
-.date {
-	grid-area: 2 / 3 / 2 / 3;
-    text-align: right;
-    border-left: 2px solid rgba(62, 62, 62, 0.3);
-    padding-left: 1rem;
-}
 
 
 </style>
