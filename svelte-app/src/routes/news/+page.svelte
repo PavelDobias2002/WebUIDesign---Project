@@ -152,7 +152,7 @@
         font-family: "Exo 2", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
-        font-size: 5rem;
+        font-size: 4rem;
         font-style: normal;
         border-bottom: 4px solid yellow;
     }
