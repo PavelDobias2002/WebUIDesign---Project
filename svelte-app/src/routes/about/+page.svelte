@@ -41,8 +41,7 @@
             rgba(0,0,0,0.4) 60%, 
             rgba(0,0,0,0.7) 100%);
         z-index: -1;
-    }
-
+    }   
     .reveal-logo {
         display: flexbox;
         opacity: 0;
@@ -108,7 +107,7 @@
         text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
         transform: scale(1.02)
     }
-
+        
     @keyframes revealText {
         0% {
             opacity: 0;
