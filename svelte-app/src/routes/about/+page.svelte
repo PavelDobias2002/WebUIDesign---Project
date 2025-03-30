@@ -41,8 +41,7 @@
             rgba(0,0,0,0.4) 60%, 
             rgba(0,0,0,0.7) 100%);
         z-index: -1;
-    }
-
+    }   
     .reveal-logo {
         display: flexbox;
         opacity: 0;
@@ -102,14 +101,13 @@
         font-size: 120px;
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         transition: text-shadow 0.3s ease, transform 0.3s ease;
-        animation-delay: 0.2s;
     }
 
     .content h1:hover {
         text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
         transform: scale(1.02)
     }
-
+        
     @keyframes revealText {
         0% {
             opacity: 0;
