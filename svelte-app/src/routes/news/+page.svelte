@@ -1,4 +1,35 @@
 <script>
+import { onMount } from 'svelte';
+
+// data for each news
+let allNews = [
+    {
+        id: 1,
+        title: 'Nosferatu',
+        subtitle: 'Spongebob favourite vampire',
+        content: 'Tim Burton’s The Nightmare Before Christmas (1993) is a unique blend of dark gothic aesthetics and whimsical fairytale charm. The film follows Jack Skellington, the Pumpkin King of Halloween Town, who discovers Christmas Town and decides to bring holiday cheer—though with a spooky twist.',
+        author: 'Pavel Dobias',
+        date: '29/03/2025'
+    },
+    {
+        id: 2,
+        title: 'Writers Strike!',
+        subtitle: 'What this means to Hollywood',
+        content: 'Writers hit the streets...',
+        author: 'Pavel Dobias',
+        date: '29/03/2025'
+    },
+    {
+        id: 3,
+        title: 'Nosferatu',
+        subtitle: 'Spongebob favourite vampire',
+        content: 'Tim Burton’s The Nightmare Before Christmas (1993) is a unique blend of dark gothic aesthetics and whimsical fairytale charm. The film follows Jack Skellington, the Pumpkin King of Halloween Town, who discovers Christmas Town and decides to bring holiday cheer—though with a spooky twist.',
+        author: 'Pavel Dobias',
+        date: '29/03/2025'
+    }
+];
+
+let news = [...allNews];
 
 </script>
 <div class="overlay"></div> <!--Overlay over the page background creating subtle gradient-->
@@ -7,119 +38,36 @@
     <h2>From Cinema to your screen.</h2>
 </div>
 
-<div class="news-container">    <!--Container containing all the news articles-->
-	
-    <div class="news-article">  <!--div for each article -->
-        
-        <div class="title"> <!--Left side of the div with titles-->
-		    <a href="/newsArticle">
-            <h3>Nosferatu</h3>
-            <h4>Spongebobs favourite vampire</h4>
-            </a>
-	    </div>
-	    
-        <div class="paragraph"> <!--Middle section for description of the news-->
-            <a href="/newsArticle">
-            <p>The new adaptaion of legendary Vampire is set to be an amazing watch. <br>
-            The adaptaion of old and classic Nosferatu hit the theaters a while back. We wanted to look at the impact this old school vampire had on audiences. <br>
-            Did he pierced the audiances necks or was his frenzy bloodless? Find out more...</p>
-            </a>
-        </div>
+{#if news.length > 0}
+		<div class="news-container">
 
-        <div class="date">  <!-- date and editor info on the right -->
-		    <h3>Date:</h3>
-		    <p>25/03/2025</p>
-            <h3>Editor:</h3>
-            <p>Pavel Dobias</p>
-	    </div>
-    </div>
+			{#each news as news (news.id)}
 
-    <!-- This layout is used for each news article div-->
+				<div class="news-article">
 
-    <div class="news-article">
+					<div class="title">
+						<a href="/newsArticle">
+                            <h3>{news.title}</h3>
+                            <h4>{news.subtitle}</h4>
+                            </a>
+					</div>
 
-	    <div class="title">
-		    
-            <h3>Writers Strike!</h3>
-            <h4>Another dent in Hollywoods trails</h4>
-            
-	    </div>
-	    
-        <div class="paragraph">
-            <p>After the cuts, writers hit the streets and...</p>
+					<div class="paragraph">
+						<a href="/newsArticle">
+                            <p>{news.content}</p>
+                            </a>
+					</div>
 
-        </div>
-
-        <div class="date">
-		    <h3>Date:</h3>
-		    <p>25/03/2025</p>
-            <h3>Editor:</h3>
-            <p>Pavel Dobias</p>
-	    </div>
-        
-        <div class="container">
-
-        </div>
-    </div>
-    
-    <div class="news-article">
-
-	    <div class="title">
-            <a href="/about">
-		    <h3>Mickey 17</h3>
-            <h4>Weird movie</h4>
-            </a>
-	    </div>
-	    
-        <div class="paragraph">
-            <p>​Bong Joon Ho's latest film, "Mickey 17," is a sci-fi satire starring Robert Pattinson as Mickey Barnes, an expendable crew member on a space colonization mission. In this dystopian future, Earth is plagued by environmental disasters, prompting a mission to colonize Niflheim. Mickey's role involves repeated dangerous tasks, resulting in his death and subsequent reprinting with retained memories.</p>
-
-        </div>
-
-        <div class="date">
-		    <h3>Date:</h3>
-		    <p>25/03/2025</p>
-            <h3>Editor:</h3>
-            <p>Pavel Dobias</p>
-	    </div>
-        
-        <div class="container">
-
-        </div>
-    </div>
-
-    <div class="news-article">
-	    <div class="title">
-		    <h3>Minecraft Flop?</h3>
-            <h4>The movie adaptation of beloved game causing waves.</h4>
-	    </div>
-	    
-        <div class="paragraph">
-            <p>
-                The first trailer of upcoming Minecraft Movie left a fans of the series questing the decisions made by the studio.<br>
-                The backlog of amazing Minecraft animations makes the fans to come to one conclussion: "Why isnt the movie animated?"<br>
-                Find out more...
-            </p>
-
-        </div>
-
-        <div class="date">
-		    <h3>Date:</h3>
-		    <p>25/03/2025</p>
-            <h3>Editor:</h3>
-            <p>Pavel Dobias</p>
-	    </div>
-        
-        <div class="container">
-
-        </div>
-    </div>
-
-    
-	
-</div>
-
-
+					<div class="date">
+						<h3>Date:</h3>
+		                <p>{news.date}</p>
+                        <h3>Editor:</h3>
+                        <p>{news.author}</p>
+					</div>
+				</div>
+			{/each}
+		</div>
+	{/if}
 
 <style>
 	    .overlay {  /*the gradient on the page background*/
@@ -140,7 +88,7 @@
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
-        -webkit-text-stroke: 2px yellow;
+        -webkit-text-stroke: 2px var(--news-color);
         color: transparent;
         transition: transform 0.3s ease;
         animation: strokeTransition 2s ease-in-out infinite alternate;
@@ -152,9 +100,9 @@
         font-family: "Exo 2", sans-serif;
         font-optical-sizing: auto;
         font-weight: 500;
-        font-size: 5rem;
+        font-size: 4rem;
         font-style: normal;
-        border-bottom: 4px solid yellow;
+        border-bottom: 4px solid var(--news-color);
     }
 
 	.news-container h3{ /*Style for heading within the news article divs*/
@@ -164,7 +112,7 @@
         font-style: normal;
         font-size: 2rem;
 
-        border-bottom: 2px solid yellow;
+        border-bottom: 2px solid var(--news-color);
 		
 		letter-spacing: 2px;
 		text-transform: uppercase;
@@ -209,27 +157,17 @@
         display: grid;
         grid-template-columns: 2fr 4fr 1fr;
         gap: 1.5rem;
-        border-bottom: 3px solid yellow;
-        border-left: 3px solid yellow;
+        border-bottom: 3px solid var(--news-color);
+        border-left: 3px solid var(--news-color);
         transition: all 0.3s ease;
     }
 
     .news-article:hover {   /*When hover on the article it goes up to emphasize clickability*/
         margin-top: 5px;
         transform: translateY(-10px);
-        border-bottom: 10px solid yellow;
+        border-bottom: 10px solid var(--news-color);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-
-.image {
-	grid-area: 1 / 1 / 1/ 1; /*row start column start/row end column end*/
-}
-.image img{
-	border-radius: 10px;
-	width:100%;
-	height:100%;
-	object-fit: cover;
-}
 
 /*where the elements of the news article are within the div*/
 .title {
@@ -251,11 +189,6 @@
     text-align: right;
     border-left: 2px solid rgba(62, 62, 62, 0.3);
     padding-left: 1rem;
-}
-
-.container{
-    grid-area: 1 / 1 / 1 / 3;
-    z-index: -1;
 }
 
 </style>
