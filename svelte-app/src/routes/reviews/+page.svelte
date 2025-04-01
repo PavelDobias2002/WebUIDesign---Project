@@ -344,7 +344,7 @@ function handleSearch() {
 	grid-area: 1 / 3 / 1 / 8;
     text-align: right;
     border-left: 2px solid rgba(62, 62, 62, 0.3);
-    padding-left: 1rem;
+    padding-left: 2rem;
 }
 
 </style>

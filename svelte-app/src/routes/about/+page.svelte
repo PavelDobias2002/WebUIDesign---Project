@@ -9,8 +9,8 @@
 <div class="overlay"></div>
 
 <div class="content">
-    <h1 class="reveal-text">About...</h1>
-    <img src="/aboutLogo.png" alt="NoSignalMedia" class="reveal-logo">
+    <h1>About...</h1>
+    <!--<img src="/logo.png" alt="NoSignalMedia" class="reveal-logo">-->
 </div>
 
 <div class="about-section">
@@ -27,6 +27,9 @@
 <style>
     h1{
         color: white ;
+        font-family: 'Pixelify sans', sans-serif;
+        border-bottom: 4px solid var(--about-color);
+        margin-bottom: 2rem;
     }
     .overlay {
         position: fixed;
@@ -76,9 +79,9 @@
 
     .about-section {
         max-width: 1500px;
-        margin: 60px auto;
         padding: 0 20px;
         text-align: center;
+        align-items: center;
     }
 
     .about-section p {
@@ -93,6 +96,10 @@
         opacity: 0;
         transform: translateY(20px);
         animation: revealText 1s forwards ease-out;
+        font-family: "Exo 2", sans-serif;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        text-align: center;
     }
     
     .content h1 {
