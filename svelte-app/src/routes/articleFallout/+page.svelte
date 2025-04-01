@@ -1,0 +1,7 @@
+<div class="content">
+    <h1 class="reveal-text">About...</h1>
+</div>
+
+<div class="about-section">
+    <p class= "reveal-text">No Signal Media was born from our deep love of movies and the excitement of building something meaningful from the ground up. Film has always been more than just entertainment for us. It is an art form that tells stories, evokes emotions, and sparks conversations. Whether it is analyzing the intricate details of a classic masterpiece, diving into the latest releases, or exploring the evolving landscape of cinema, we are passionate about breaking down what makes movies so powerful. We want to create a space where film lovers can come together to celebrate the magic of storytelling, share unique perspectives, and engage in thoughtful discussions about the art of filmmaking. Just as much as we enjoy writing about and discussing films, we love shaping No Signal Media itself. Every update, every design tweak, and every new feature is an extension of our passion for both cinema and digital creation. Building this platform is a creative process in its own right, and we take pride in crafting a space that truly reflects our enthusiasm. As the site grows, so does our excitement for what is ahead. New ideas, deeper conversations, and a community of like-minded movie lovers who share in our appreciation. For us, No Signal Media is more than just a website. It is a labor of love, a creative outlet, and a constantly evolving home for film enthusiasts who, like us, believe that movies are worth celebrating.</p>
+</div>
