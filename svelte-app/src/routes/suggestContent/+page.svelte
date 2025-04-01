@@ -324,6 +324,7 @@
         transform: translateY(1px);
     }
 
+    /*phone*/
     @media (max-width: 768px) {
         .form-row {
             flex-direction: column;
@@ -331,13 +332,33 @@
         }
 
         .form-container {
-            margin: 3vh 1rem;
+            margin: auto;
             padding: 1.5rem;
         }
-
+        /*rate our website buttons */
         .radio-group {
             flex-direction: column;
             align-items: flex-start;
+        }
+
+        .contact-form h2 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-form p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /*tablet*/
+        @media (max-width: 992px){
+            .contact-form h2{
+                font-size: 1.8rem;
+            }
+            .contact-form p {
+                font-size: 1.3rem;
+            }
         }
     }
 </style>
