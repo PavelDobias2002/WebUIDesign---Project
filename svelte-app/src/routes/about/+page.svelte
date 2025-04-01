@@ -10,7 +10,7 @@
 
 <div class="content">
     <h1 class="reveal-text">About...</h1>
-    <img src="/logo.png" alt="NoSignalMedia" class="reveal-logo">
+    <img src="/aboutLogo.png" alt="NoSignalMedia" class="reveal-logo">
 </div>
 
 <div class="about-section">
