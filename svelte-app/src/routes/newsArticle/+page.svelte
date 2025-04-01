@@ -31,7 +31,7 @@
     <img class ="image2" src='/nigthmare.jpg' alt="image of nightmare before christmass movie">  
 
     <p class="paragraph4">
-        We can go back as legendary as Tim Burtons The Nightamere Before Christmass, a movie targeting kids with its whipsicl animation and art style. But as many know having horror themes and adult centeret content. While marketed as a family-friendly film, The Nightmare Before Christmas incorporates various horror elements that might not be immediately apparent to young viewers. The character Oogie Boogie, for example, is a literal boogeyman composed of living bugs, an image that can be deeply unsettling. The themes of death, the afterlife, and existential crisis—particularly Jack’s longing for purpose—resonate more profoundly with older audiences.
+        We can go back as legendary as Tim Burtons The Nightamere Before Christmass, a movie targeting kids with its whipsicl animation and art style. But as many know having horror themes and adult centeret content. While marketed as a family-friendly film, The Nightmare Before Christmas incorporates various horror elements that might not be immediately apparent to young viewers.
 
         Even the film’s musical numbers, composed by Danny Elfman, carry eerie undertones. Songs like “This Is Halloween” celebrate the thrills of fright, while “Oogie Boogie’s Song” introduces a sadistic gambling villain. These moments contribute to the film’s spooky atmosphere while still remaining accessible to children.
     </p>
@@ -70,9 +70,20 @@
     /* Update the header-container styles */
     .header-container {
         margin-bottom: 2rem;
+        width: 75%;
+        max-width: 1600px;
+        margin: auto;
         
     }
-    
+
+    .body-container p{
+		font-family: "Exo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.25rem;
+        text-align: left;
+    }
 
     .header-container h2{
         font-family: "Exo 2", sans-serif;
@@ -82,6 +93,7 @@
         font-style: normal;
         border-bottom: 4px solid var(--news-color);
         text-align: left;
+        
     }
 
     .header-container h3{
@@ -106,27 +118,26 @@
 		letter-spacing: 2px;
 	}
 	
-	.body-container p{
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.25rem;
-        text-align: left;
-    }
+	
 
     .body-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
         grid-template-rows: repeat(1, 1fr);
         gap: 1rem;
-        width:100%;
+        width:75%;
         max-width: 1600px;
         margin:auto;
     }
 
+.image, .image2 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
-
+/*Image layout desktop*/
 .image {
 	grid-area: 1 / 2 / 2/ 2; /*row start column start/row end column end*/
 }
@@ -134,6 +145,8 @@
 .image2{
     grid-area: 5 / 1/ 5/ 1;
 }
+
+/*text positioning using grid*/
 
 .title {
 	grid-area: 4 / 1 / 3 / 3;
@@ -160,6 +173,8 @@
     grid-area: 4 / 1 / 4 / 3
 }
 
+/*navigation positioning*/
+
 .news-nav{
     display: flex;
     text-align: left;
@@ -170,6 +185,7 @@
     display: flex;
     gap: 1rem;
     text-align: left;
+    flex-wrap: wrap;
 }
 
 .news-nav ul li{
@@ -181,6 +197,102 @@
 
 .news-nav ul li:hover{
     transform: scale(1.050);
+}
+
+/* Tablet breakpoint (max-width: 1024px) */
+@media screen and (max-width: 64em) {
+    .body-container,
+    .header-container {
+        width: 85%;
+    }
+
+    .header-container h2 {
+        font-size: 4rem;
+    }
+
+    .header-container h3 {
+        font-size: 1.75rem;
+    }
+
+    .body-container p {
+        font-size: 1.1rem;
+    }
+
+    .news-nav ul {
+        gap: 0.75rem;
+    }
+}
+
+/* Mobile breakpoint (max-width: 768px) */
+@media screen and (max-width: 48em) {
+    .body-container,
+    .header-container {
+        width: 95%;
+    }
+
+    .body-container {
+        grid-template-columns: 1fr; /*go for one column for mobiles*/
+        gap: 1.5rem;
+    }
+
+    /* Reposition grid items for mobile D:*/
+    .image {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .paragraph {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .paragraph2 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .title {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .paragraph3 {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    .image2 {
+        grid-area: 6 / 1 / 7 / 2;
+    }
+
+    .paragraph4 {
+        grid-area: 7 / 1 / 8 / 2;
+    }
+
+    .title2 {
+        grid-area: 8 / 1 / 9 / 2;
+    }
+
+    .news-nav {
+        grid-area: 9 / 1 / 10 / 2;
+    }
+
+    /* Header styles for mobile */
+    .header-container h2 {
+        font-size: 3rem;
+    }
+
+    .header-container h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Navigation styles for mobile */
+    .news-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .news-nav ul li {
+        width: 100%;
+        border-left: none;
+        border-bottom: 2px solid var(--news-color);
+    }
 }
 
 

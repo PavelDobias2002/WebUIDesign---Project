@@ -142,53 +142,152 @@ let news = [...allNews];
 		border-radius:30px;
 		padding:1.5rem;
 	}
-    .news-container{    /*the grid system used for the news container*/
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); 
-        grid-template-rows: auto auto auto;
-        gap: 2rem;
-		padding:2rem;
-        width:80%;
-        max-width: 1600px;
-        margin:auto;
-    }
-
-    .news-article{ /*grid system for the news articles*/
-        display: grid;
-        grid-template-columns: 2fr 4fr 1fr;
-        gap: 1.5rem;
-        border-bottom: 3px solid var(--news-color);
-        border-left: 3px solid var(--news-color);
-        transition: all 0.3s ease;
-    }
-
+    
     .news-article:hover {   /*When hover on the article it goes up to emphasize clickability*/
         margin-top: 5px;
         transform: translateY(-10px);
         border-bottom: 10px solid var(--news-color);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
+    /* mobile first - from smallest screen to the biggest transition: all 0.3s ease;*/
 
-/*where the elements of the news article are within the div*/
+/* Base styles (desktop first) */
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: auto auto auto;
+    gap: 2rem;
+    padding: 2rem;
+    width: 80%;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.news-article {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
+    gap: 1.5rem;
+    border-bottom: 3px solid var(--news-color);
+    border-left: 3px solid var(--news-color);
+    transition: all 0.3s ease;
+}
+
+/* Base article layout (desktop) */
 .title {
-	grid-area: 1 / 1 / 1 / 2; /*row-start/ column-start/ row-end/ column-end/;*/
+    grid-area: 1 / 1 / 1 / 2;
     border-right: 2px solid rgba(62, 62, 62, 0.3);
     padding-right: 1rem;
     text-align: left;
-	
 }
 
-.paragraph{
+.paragraph {
     grid-area: 1 / 2 / 1 / 2;
     padding: 0 1rem;
     text-align: left;
 }
 
 .date {
-	grid-area: 1 / 3 / 1 / 3;
+    grid-area: 1 / 3 / 1 / 3;
     text-align: right;
     border-left: 2px solid rgba(62, 62, 62, 0.3);
     padding-left: 1rem;
+}
+
+/* Hover effects for desktop */
+.news-article:hover {
+    margin-top: 5px;
+    transform: translateY(-10px);
+    border-bottom: 10px solid var(--news-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Tablet breakpoint (max-width: 1024px) */
+@media screen and (max-width: 64em) {
+    .news-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .news-article {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+    }
+
+    .title {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .paragraph {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .date {
+        grid-area: 2 / 1 / 3 / 3;
+        text-align: right;
+        border-left: none;
+        border-top: 2px solid rgba(62, 62, 62, 0.3);
+        padding-top: 1rem;
+    }
+
+    .header-container h2 {
+        font-size: 3rem;
+    }
+}
+
+/* Mobile breakpoint (max-width: 768px) */
+@media screen and (max-width: 48em) {
+    .news-container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .news-article {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+
+    .title {
+        grid-area: 1 / 1 / 2 / 2;
+        border-right: none;
+        border-bottom: 2px solid rgba(62, 62, 62, 0.3);
+        padding: 0 0 1rem 0;
+        text-align: center;
+    }
+
+    .paragraph {
+        grid-area: 2 / 1 / 3 / 2;
+        padding: 1rem 0;
+        border-bottom: 2px solid rgba(62, 62, 62, 0.3);
+    }
+
+    .date {
+        grid-area: 3 / 1 / 4 / 2;
+        text-align: center;
+        border-top: none;
+        padding-top: 1rem;
+    }
+
+    /*smaller text for mobile*/
+    .header-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-container h2 {
+        font-size: 2rem;
+    }
+
+    .news-container h3 {
+        font-size: 1.75rem;
+    }
+
+    .news-container h4 {
+        font-size: 1.25rem;
+    }
+
+    .news-container p {
+        font-size: 1rem;
+    }
 }
 
 </style>

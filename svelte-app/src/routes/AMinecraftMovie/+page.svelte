@@ -181,4 +181,57 @@
         }
     }
 
+	@media (max-width: 768px) {
+		.movie-container {
+			grid-template-columns: 1fr;
+			gap:20px;
+			width:100%;
+			padding:2rem;
+			margin:auto;
+			background-color: rgba(104, 165, 106, 0.6);
+			border-radius:30px;
+		}
+		.movie-container > div p{
+			font-size:1.3rem;
+		}
+		.image{
+			grid-area: 1 / 1 / 2 / 2;
+		}
+		.title{
+			grid-area: 2 / 1 / 3 / 2;
+		}
+		.movie-container .title h3{
+			font-size: 2rem;
+		}
+		.genre{
+			grid-area: 3 / 1 / 4 / 2;
+		}
+		.director {
+			grid-area: 4 /1/5/2;
+			height: 100%;
+		}
+		.production {
+			grid-area: 5/1/6/2;
+		}
+		.cast {
+		grid-area: 6 / 1 / 7 / 2;
+	
+		}
+		.cinemasIreland {
+		grid-area: 7/1/8/2;
+	
+		}
+		.description {
+		grid-area: 8 / 1 / 9 / 2;
+	
+		}
+	.trailer {
+	grid-area: 9 / 1 / 10 / 2;
+	overflow:hidden;
+	position:relative;
+	}
+
+
+	}
+
 </style>
