@@ -1,7 +1,90 @@
-<div class="content">
-    <h1 class="reveal-text">About...</h1>
+<script>
+    import { scale } from 'svelte/transition';
+</script>
+
+<div class="page-container">
+    <div class="article-container">
+        <div class="article-content">
+            <!-- Your article content goes here -->
+            <h1>Article Fallout</h1>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
 </div>
 
-<div class="about-section">
-    <p class= "reveal-text">No Signal Media was born from our deep love of movies and the excitement of building something meaningful from the ground up. Film has always been more than just entertainment for us. It is an art form that tells stories, evokes emotions, and sparks conversations. Whether it is analyzing the intricate details of a classic masterpiece, diving into the latest releases, or exploring the evolving landscape of cinema, we are passionate about breaking down what makes movies so powerful. We want to create a space where film lovers can come together to celebrate the magic of storytelling, share unique perspectives, and engage in thoughtful discussions about the art of filmmaking. Just as much as we enjoy writing about and discussing films, we love shaping No Signal Media itself. Every update, every design tweak, and every new feature is an extension of our passion for both cinema and digital creation. Building this platform is a creative process in its own right, and we take pride in crafting a space that truly reflects our enthusiasm. As the site grows, so does our excitement for what is ahead. New ideas, deeper conversations, and a community of like-minded movie lovers who share in our appreciation. For us, No Signal Media is more than just a website. It is a labor of love, a creative outlet, and a constantly evolving home for film enthusiasts who, like us, believe that movies are worth celebrating.</p>
-</div>
+<style>
+        .container {
+        position: relative;
+        max-width: 1000px;
+        margin: 100px auto;
+        padding: 0 20px;
+    }
+
+    .overlap-image {
+        position: absolute;
+        bottom: -30px;
+        left: -30px;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+    .page-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem;
+        min-height: 100vh;
+    }
+
+    .article-container {
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        max-width: 1500px;
+        width: 100%;
+        border-bottom: 10px solid var(--articles-color);
+        border-left: 10px solid var(--articles-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .article-content {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: black;
+    }
+
+    p {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.2rem;
+        color: rgb(75, 75, 75);
+        line-height: 1.6;
+    }
+
+    @media (max-width: 850px) {
+        .article-container {
+            max-width: 95%;
+        }
+        
+        .article-content {
+            padding: 1.5rem;
+        }
+    }
+</style>
