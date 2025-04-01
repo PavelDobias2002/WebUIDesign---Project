@@ -78,6 +78,7 @@
         opacity: 0;
         transform: translateY(20px);
         animation: revealText 1s forwards ease-out;
+        border-bottom: 4px solid var(--articles-color);
     }
 
 
