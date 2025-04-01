@@ -4,7 +4,6 @@
 <div class="overlay"></div>
 <div class="header-container">
     <h1 class="reveal-text">Movie Calendar</h1>
-    <h2 class= "reveal-text">The Alto Knights</h2>
 </div>
 
 <div class="movie-container">
@@ -87,6 +86,7 @@
     }
 	.movie-container p{
 		font-size: 1rem;
+		font-family:"Exo 2", sans-serif;
 	}
 	.movie-container > div{
 		background-color: rgba(155, 85, 5, 0.6);

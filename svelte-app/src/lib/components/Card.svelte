@@ -69,6 +69,7 @@
     /* Description Styling */
     .content p {
         font-size: 1rem;
+        font-family:"Exo 2", sans-serif;
     }
     .card:hover {
         height : 350px;  

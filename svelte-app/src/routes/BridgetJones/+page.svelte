@@ -4,7 +4,6 @@
 <div class="overlay"></div>
 <div class="header-container">
     <h1 class="reveal-text">Movie Calendar</h1>
-    <h2 class= "reveal-text">Bridget Jones: Mad About the Boy</h2>
 </div>
 
 <div class="movie-container">
@@ -89,6 +88,7 @@
     }
 	.movie-container p{
 		font-size: 1rem;
+		font-family:"Exo 2", sans-serif;
 	}
 	.movie-container > div{
 		background-color: rgba(231, 151, 207, 0.6);

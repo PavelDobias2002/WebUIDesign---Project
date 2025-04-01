@@ -76,9 +76,9 @@
                     // Adjust content position and opacity based on scroll
                     if (scrollY > 50) {
                         content.style.transform = `translateY(${scrollY * 0.03}px)`; // slower when i scroll past 50px (every 10px it moves down by 3px)
-                        content.style.opacity = Math.max(1 - scrollY / 500, 1); /* Fade out a bit faster, opacity increases as i scroll, but is at least 0.1 */
+                        content.style.opacity = Math.max(1 - scrollY / 500, 0.1); /* Fade out a bit faster, opacity increases as i scroll, but is at least 0.1 */
                         content2.style.transform = `translateY(${scrollY * 0.03}px)`; // slower when i scroll past 50px
-                        content2.style.opacity = Math.max(1 - scrollY / 500, 1); /* Fade out a bit faster */
+                        content2.style.opacity = Math.max(1 - scrollY / 500, 0.1); /* Fade out a bit faster */
                     } else {
                         //initial state
                         content.style.transform = 'translateY(0)'; //when the scroll pos is very low it doesnt fade or move
@@ -179,6 +179,9 @@
 
 <style>
   
+    h1,p{
+        color:white;
+    }
 
     /* Second background (GIF animation) */
     .changing-background2 {
@@ -261,6 +264,7 @@
     .content p {
         animation-delay: 0.5s;
         font-size: 1.5rem;
+        font-family:"Exo 2", sans-serif;
     }
 
 .content2 h2:first-child {
@@ -441,7 +445,7 @@
         background-color:rgb(214, 86, 80);
     }
     .movie-calendar{
-        background-color:rgba(255, 255, 255, 0.2);
+        background-color:rgba(255, 255, 255,0.6);
         border-radius:50px;
         position: relative;
         z-index: 10; /* Higher z-index to appear above the cards */
@@ -454,6 +458,7 @@
     }
     .content2 h2{
         font-size: 60px;
+        color:black;
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         transition: text-shadow 0.3s ease, transform 0.3s ease;
         
@@ -558,6 +563,7 @@
     
     .expanded-content { /*invisible unless i hover on the button*/
         max-height: 0;
+        font-family: "Exo 2", sans-serif;
         overflow: hidden;
         transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease;
         opacity: 0;

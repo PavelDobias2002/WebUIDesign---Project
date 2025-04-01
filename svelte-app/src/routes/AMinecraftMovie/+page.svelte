@@ -4,7 +4,6 @@
 <div class="overlay"></div>
 <div class="header-container">
     <h1 class="reveal-text">Movie Calendar</h1>
-    <h2 class= "reveal-text">A Minecraft Movie</h2>
 </div>
 
 <div class="movie-container">
@@ -90,7 +89,8 @@
         text-transform: capitalize;
     }
 	.movie-container p{
-		font-size: 0.9rem;
+		font-size:1rem;
+		font-family:"Exo 2", sans-serif;
 	}
 	.movie-container > div{
 		background-color: rgba(104, 165, 106, 0.6);

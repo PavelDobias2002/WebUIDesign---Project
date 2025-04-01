@@ -54,6 +54,7 @@
     .content2 p {
         font-size: 1rem;
         color: #000000;
+        font-family:"Exo 2", sans-serif;
     }
 
     /* Pseudo-Class: Hover Effect
