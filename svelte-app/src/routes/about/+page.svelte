@@ -10,7 +10,6 @@
 
 <div class="content">
     <h1 class="reveal-text">About...</h1>
-    <img src="/aboutLogo.png" alt="NoSignalMedia" class="reveal-logo">
 </div>
 
 <div class="about-section">
@@ -27,6 +26,7 @@
 <style>
     h1{
         color: white ;
+        border-bottom: 4px solid var(--about-color);
     }
     .overlay {
         position: fixed;
@@ -40,16 +40,7 @@
             rgba(0,0,0,0.7) 100%);
         z-index: -1;
     }   
-    .reveal-logo {
-        display: flexbox;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: revealLogo 1.2s forwards ease-out;
-        animation-delay: 0.1s;
-        max-width: 500px;
-        height: auto;
-        margin: 0px auto 10px;
-    }
+
 
     .image-container {
         display: flex;
@@ -84,6 +75,7 @@
     .about-section p {
         color: white;
         font-size: 25px;
+        font-family: "Exo 2", sans-serif;
         line-height: 1.6;
         text-align: justify;
         animation-delay: 0.5s;
