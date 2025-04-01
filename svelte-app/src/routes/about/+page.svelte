@@ -67,9 +67,9 @@
 
     .about-section {
         max-width: 1500px;
+        margin: 60px auto;
         padding: 0 20px;
         text-align: center;
-        align-items: center;
     }
 
     .about-section p {
@@ -85,10 +85,6 @@
         opacity: 0;
         transform: translateY(20px);
         animation: revealText 1s forwards ease-out;
-        font-family: "Exo 2", sans-serif;
-        margin-left: 10rem;
-        margin-right: 10rem;
-        text-align: center;
     }
     
     .content h1 {
