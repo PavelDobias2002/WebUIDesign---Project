@@ -15,7 +15,8 @@
 	</div>
 	<div class="genre">
 		<h3>genre:</h3>
-		<p> Kids & Family/Adventure/Fantasy/Action</p>
+		<p> Kids & Family/Adventure/</p>
+		<p>	Fantasy/Action</p>
 	</div>
 	<div class="director">
 		<h3>director:</h3>
@@ -49,7 +50,12 @@
 	</div>
 	<div class="trailer">
 		<h3>trailer</h3>
-		<iframe src="https://www.youtube.com/embed/wJO_vIDZn-I?si=WSIFNRfCq06Bl19P"></iframe>
+		<iframe src="https://www.youtube.com/embed/wJO_vIDZn-I?si=WSIFNRfCq06Bl19P"
+		title="A Minecraft Movie trailer"
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+		allowfullscreen>
+	</iframe>
 	</div>
 	
 </div>
@@ -187,7 +193,6 @@
  			width:100%;
  			padding:2rem;
 			 margin: 5vh auto;
-			max-width:fit-content;
  			background-color: rgba(104, 165, 106, 0.6);
  			border-radius:30px;
 			justify-content:center;
@@ -197,8 +202,8 @@
  			font-size:1.2rem;
  		}
 		.movie-container > div{
-			padding:0.5rem;
-			max-width:fit-content;
+			padding:0.3rem;
+			max-width:80%;
 			background-color: transparent;
 			box-shadow: none;
 			border-bottom: 4px solid rgb(0, 53, 5);
@@ -250,7 +255,7 @@
 
 	}
 
-	@media (max-width: 992px) {
+	@media (min-width: 768px) and (max-width: 1024px) {
 
 	.header-container h1{
 		font-size: 3rem;
