@@ -88,6 +88,7 @@
     }
     
     .content h1 {
+        padding-top: 10%;
         font-size: 120px;
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         transition: text-shadow 0.3s ease, transform 0.3s ease;

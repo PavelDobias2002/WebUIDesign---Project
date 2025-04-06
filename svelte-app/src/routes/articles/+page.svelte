@@ -53,11 +53,13 @@
 
 <style>
     h1 {
+        padding-top: 10%;
         text-align: center;
         color: white;
         font-size: 120px;
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         transition: text-shadow 0.3s ease, transform 0.3s ease;
+        margin-bottom: 2rem;
     }
     
     h1:hover {

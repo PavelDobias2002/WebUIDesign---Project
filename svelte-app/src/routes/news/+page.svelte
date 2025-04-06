@@ -86,6 +86,7 @@ let news = [...allNews];
     .header-container h1{   /*Style for the main heading*/
         font-family: 'Pixelify Sans', sans-serif;
         font-optical-sizing: auto;
+        padding-top: 10%;
         font-weight: 700;
         font-style: normal;
         -webkit-text-stroke: 2px var(--news-color);

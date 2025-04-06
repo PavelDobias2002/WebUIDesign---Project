@@ -70,6 +70,7 @@
     /* Update the header-container styles */
     .header-container {
         margin-bottom: 2rem;
+        padding-top: 10%;
         width: 75%;
         max-width: 1600px;
         margin: auto;

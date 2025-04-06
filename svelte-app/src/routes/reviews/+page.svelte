@@ -210,6 +210,7 @@ function handleSearch() {
     }
 
     .header-container h1{   /*Style for the main heading*/
+		padding-top: 10%;
         font-family: 'Pixelify Sans', sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
