@@ -80,7 +80,7 @@ let news = [...allNews];
 	@keyframes revealText {
         0% {
             opacity: 0;
-            transform: translateY(100px);
+            transform: translateY(50px);
         }
         100% {
             opacity: 1;

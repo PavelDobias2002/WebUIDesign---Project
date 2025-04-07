@@ -170,9 +170,9 @@
     <a href="/TheMonkey" class="monkey-link">
     <Card title="The Monkey" description="Based on Stephen King's 1980 story" image="./the_monkey.jpg"/>
 </a>
-    <a href="/BridgetJones" class="bridget-link">
+    <!--<a href="/BridgetJones" class="bridget-link">
     <Card title="Bridget Jones: Mad About the Boy" description="She's back!" image="./bridget_jones.jpg"/>
-    </a>
+    </a>-->
 </div>
 </div>
 </div>
