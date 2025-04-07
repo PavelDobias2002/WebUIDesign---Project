@@ -1,7 +1,171 @@
-<div class="content">
-    <h1 class="reveal-text">About...</h1>
+<div class="overlay"></div>
+<div class="page-container">
+        <div class="article-content">
+            <h1>Fallout</h1>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                 sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+    <div class="image-grid">
+        <div class="image small-image">
+            <img src='/fallout.jpg' alt="NCR from Fallout on Prime">
+        </div>
+
+        <div class="image small-image">
+            <img src='/fallout-s2.png' alt="Leaked NCR Power Armour">
+        </div>
+
+        <div class="image large-image">
+            <img src='/new-vegas.jpg' alt="Fallout promotional image">
+        </div>
+    </div>
+
 </div>
 
-<div class="about-section">
-    <p class= "reveal-text">No Signal Media was born from our deep love of movies and the excitement of building something meaningful from the ground up. Film has always been more than just entertainment for us. It is an art form that tells stories, evokes emotions, and sparks conversations. Whether it is analyzing the intricate details of a classic masterpiece, diving into the latest releases, or exploring the evolving landscape of cinema, we are passionate about breaking down what makes movies so powerful. We want to create a space where film lovers can come together to celebrate the magic of storytelling, share unique perspectives, and engage in thoughtful discussions about the art of filmmaking. Just as much as we enjoy writing about and discussing films, we love shaping No Signal Media itself. Every update, every design tweak, and every new feature is an extension of our passion for both cinema and digital creation. Building this platform is a creative process in its own right, and we take pride in crafting a space that truly reflects our enthusiasm. As the site grows, so does our excitement for what is ahead. New ideas, deeper conversations, and a community of like-minded movie lovers who share in our appreciation. For us, No Signal Media is more than just a website. It is a labor of love, a creative outlet, and a constantly evolving home for film enthusiasts who, like us, believe that movies are worth celebrating.</p>
-</div>
+<style>
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1rem;
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .small-image {
+        grid-column: span 1;
+    }
+
+    .large-image {
+        grid-column: span 2;
+        grid-row: 2;
+        max-width: 100%;
+    }
+
+    .image {
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 10px solid var(--articles-color);
+        border-left: 10px solid var(--articles-color);
+    }
+    
+    .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .small-image img {
+        aspect-ratio: 1/1;
+    }
+
+    .large-image img {
+        aspect-ratio: 16/9;
+    }
+    
+    
+    .page-container {
+        display: flex;
+        flex-direction: row;    
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 5rem 2rem 2rem;
+        min-height: 100vh;
+        gap: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .article-content {
+        padding: 1rem;
+        max-width: 800px;
+        width: 100%;
+        flex: 2; 
+        text-align: justify; 
+    }
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color:white;
+        letter-spacing: 2rem;
+        border-bottom: 4px solid var(--articles-color);
+        text-align: center; 
+        width: 100%; 
+    }
+
+    p {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.2rem;
+        color: rgb(255, 255, 255);
+        line-height: 1.6;
+        margin-bottom: 1.5rem; 
+    }
+    @media (max-width: 850px) {
+        .page-container {
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1rem 1rem; 
+        }
+        
+        .article-content {
+            max-width: 100%;
+            padding: 1rem;
+            text-align: left; 
+        }
+        
+        .image-grid {
+            width: 95%;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .small-image, .large-image {
+            grid-column: span 1;
+            margin-top: 1rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            letter-spacing: 1rem; 
+        }
+    }
+
+    @media (min-width: 851px) and (max-width: 1200px) {
+        .image-grid {
+            max-width: 650px;
+        }
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%,
+            rgba(0,0,0,0.4) 60%, 
+            rgba(0,0,0,0.7) 100%);
+        z-index: -1;
+    }   
+</style>
