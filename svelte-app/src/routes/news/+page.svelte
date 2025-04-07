@@ -6,28 +6,52 @@ import { scale } from 'svelte/transition';
 // data for each news
 let allNews = [
     {
-        id: 1,
-        title: 'Nosferatu',
-        subtitle: 'Spongebob favourite vampire',
-        content: 'Tim Burton’s The Nightmare Before Christmas (1993) is a unique blend of dark gothic aesthetics and whimsical fairytale charm. The film follows Jack Skellington, the Pumpkin King of Halloween Town, who discovers Christmas Town and decides to bring holiday cheer—though with a spooky twist.',
-        author: 'Pavel Dobias',
-        date: '29/03/2025'
+        "id": 1,
+        "title": "Nosferatu",
+        "subtitle": "Spongebob's favourite vampire",
+        "content": "Tim Burton’s The Nightmare Before Christmas (1993) is a unique blend of dark gothic aesthetics and whimsical fairytale charm. The film follows Jack Skellington, the Pumpkin King of Halloween Town, who discovers Christmas Town and decides to bring holiday cheer—though with a spooky twist.",
+        "author": "Pavel Dobias",
+        "date": "29/03/2025"
     },
     {
-        id: 2,
-        title: 'Writers Strike!',
-        subtitle: 'What this means to Hollywood',
-        content: 'Writers hit the streets...',
-        author: 'Pavel Dobias',
-        date: '29/03/2025'
+        "id": 2,
+        "title": "Writers Strike!",
+        "subtitle": "What this means to Hollywood",
+        "content": "The ongoing writers' strike has brought Hollywood to a standstill, delaying major productions and TV shows. Writers are demanding better pay and improved working conditions, while studios struggle to negotiate a deal. The industry faces uncertainty as both sides remain firm in their positions.",
+        "author": "Pavel Dobias",
+        "date": "29/03/2025"
     },
     {
-        id: 3,
-        title: 'Nosferatu',
-        subtitle: 'Spongebob favourite vampire',
-        content: 'Tim Burton’s The Nightmare Before Christmas (1993) is a unique blend of dark gothic aesthetics and whimsical fairytale charm. The film follows Jack Skellington, the Pumpkin King of Halloween Town, who discovers Christmas Town and decides to bring holiday cheer—though with a spooky twist.',
-        author: 'Pavel Dobias',
-        date: '29/03/2025'
+        "id": 3,
+        "title": "Godzilla x Kong: The New Empire",
+        "subtitle": "The MonsterVerse continues",
+        "content": "The titanic duo of Godzilla and King Kong teams up against a mysterious new enemy in *Godzilla x Kong: The New Empire*. With bigger action, new creatures, and an expanded MonsterVerse, this sequel aims to be a massive cinematic event.",
+        "author": "Pavel Dobias",
+        "date": "05/04/2025"
+    },
+    {
+        "id": 4,
+        "title": "Dune: Part Two",
+        "subtitle": "The sci-fi epic returns",
+        "content": "Denis Villeneuve’s *Dune: Part Two* continues the journey of Paul Atreides, played by Timothée Chalamet. With stunning visuals and an expanded cast, the film promises to be even more ambitious than its predecessor.",
+        "author": "Pavel Dobias",
+        "date": "05/04/2025"
+    },
+    {
+        "id": 5,
+        "title": "The Batman 2",
+        "subtitle": "Robert Pattinson returns as the Dark Knight",
+        "content": "Matt Reeves is set to direct *The Batman 2*, continuing his gritty take on Gotham. Fans are speculating about the main villain—will Barry Keoghan’s Joker take the spotlight, or will a new threat emerge?",
+        "author": "Pavel Dobias",
+        "date": "05/04/2025"
+    },
+    {
+        "id": 6,
+        "title": "Joker: Folie à Deux",
+        "subtitle": "Joaquin Phoenix and Lady Gaga in a twisted musical",
+        "content": "Todd Phillips returns with *Joker: Folie à Deux*, a unique psychological thriller that leans into musical elements. Joaquin Phoenix reprises his role as Arthur Fleck, joined by Lady Gaga as Harley Quinn in a film promising to be as unsettling as it is captivating.",
+        "author": "Pavel Dobias",
+        "date": "05/04/2025"
     }
 ];
 

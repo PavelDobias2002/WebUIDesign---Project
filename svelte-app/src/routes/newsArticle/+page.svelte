@@ -42,11 +42,11 @@
 
     <nav class="news-nav">
         <ul>
-            <li><a href="/newsArticle">Writers Strike</a></li>
-            <li><a href="/newsArticle">Writers Strike</a></li>
-            <li><a href="/newsArticle">Writers Strike</a></li>
-            <li><a href="/newsArticle">Writers Strike</a></li>
-            <li><a href="/newsArticle">Writers Strike</a></li>
+            <li><a href="/newsArticle">News1</a></li>
+            <li><a href="/newsArticle">News2</a></li>
+            <li><a href="/newsArticle">News3</a></li>
+            <li><a href="/newsArticle">News4</a></li>
+            <li><a href="/newsArticle">News5</a></li>
         </ul>
     </nav>
 
