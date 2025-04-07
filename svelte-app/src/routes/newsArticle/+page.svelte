@@ -42,11 +42,11 @@
 
     <nav class="news-nav">
         <ul>
-            <li><a href="/newsArticle">Writers Strike</a></li>
-            <li><a href="/newsArticle">Writers Strike</a></li>
-            <li><a href="/newsArticle">Writers Strike</a></li>
-            <li><a href="/newsArticle">Writers Strike</a></li>
-            <li><a href="/newsArticle">Writers Strike</a></li>
+            <li><a href="/newsArticle">News1</a></li>
+            <li><a href="/newsArticle">News2</a></li>
+            <li><a href="/newsArticle">News3</a></li>
+            <li><a href="/newsArticle">News4</a></li>
+            <li><a href="/newsArticle">News5</a></li>
         </ul>
     </nav>
 
@@ -54,84 +54,86 @@
 
 
 <style>
-	    .overlay { /*the gradient on the page background*/
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, 
+.overlay 
+{ /*the gradient on the page background*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
             rgba(0,0,0,0.2) 0%,
             rgba(0,0,0,0.4) 60%, 
             rgba(0,0,0,0.7) 100%);
-        z-index: -1;
-    }
+    z-index: -1;
+}
 
     /* Update the header-container styles */
-    .header-container {
-        margin-bottom: 2rem;
-        padding-top: 10%;
-        width: 75%;
-        max-width: 1600px;
-        margin: auto;
-        
-    }
+.header-container 
+{
+    margin-bottom: 2rem;
+    padding-top: 10%;
+    width: 75%;
+    max-width: 1600px;
+    margin: auto;
+}
+.body-container p
+{
+	font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.25rem;
+    text-align: left;
+}
 
-    .body-container p{
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.25rem;
-        text-align: left;
-    }
+.header-container h2
+{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 5rem;
+    font-style: normal;
+    border-bottom: 4px solid var(--news-color);
+    text-align: left;
+}
 
-    .header-container h2{
-        font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-size: 5rem;
-        font-style: normal;
-        border-bottom: 4px solid var(--news-color);
-        text-align: left;
-        
-    }
+.header-container h3
+{
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 2rem;
+    font-style: nromal;
+    text-align: left;
+}
 
-    .header-container h3{
-        font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-size: 2rem;
-        font-style: nromal;
-        text-align: left;
-        
-    }
+.body-container h2
+{
+	font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
 
-	.body-container h2{
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 1.5rem;
-
-        border-bottom: 2px solid var(--news-color);
+    border-bottom: 2px solid var(--news-color);
 		
-		letter-spacing: 2px;
-	}
-	
-	
+	letter-spacing: 2px;
+}
 
-    .body-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        grid-template-rows: repeat(1, 1fr);
-        gap: 1rem;
-        width:75%;
-        max-width: 1600px;
-        margin:auto;
-    }
+.body-container
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1rem;
+    width:75%;
+    max-width: 1600px;
+    margin:auto;
+}
 
-.image, .image2 {
+.image, .image2 
+{
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -139,7 +141,8 @@
 }
 
 /*Image layout desktop*/
-.image {
+.image 
+{
 	grid-area: 1 / 2 / 2/ 2; /*row start column start/row end column end*/
 }
 
@@ -149,54 +152,63 @@
 
 /*text positioning using grid*/
 
-.title {
+.title 
+{
 	grid-area: 4 / 1 / 3 / 3;
     text-align: left;
 	
 }
 
-.title2 {
+.title2 
+{
 	grid-area: 6 / 1 / 6 / 3;
     text-align: left;
 	
 }
 
-.paragraph{
+.paragraph
+{
     grid-area: 1 / 1 / 1 / 1;
     text-align: left;
 }
 
-.paragraph2{
+.paragraph2
+{
     grid-area: 2 / 1 / 2 / 3
 }
 
-.paragraph3{
+.paragraph3
+{
     grid-area: 4 / 1 / 4 / 3
 }
 
 /*navigation positioning*/
 
-.news-nav{
+.news-nav
+{
     display: flex;
     text-align: left;
     grid-area: 7 / 1 / 7 / 3
 }
 
-.news-nav ul{
+.news-nav ul
+{
     display: flex;
     gap: 1rem;
     text-align: left;
     flex-wrap: wrap;
 }
 
-.news-nav ul li{
+.news-nav ul li
+{
     list-style-type: none;
     padding: 0.5rem;
     border-left: 2px solid var(--news-color);
     text-align: center;
 }
 
-.news-nav ul li:hover{
+.news-nav ul li:hover
+{
     transform: scale(1.050);
 }
 
@@ -295,7 +307,5 @@
         border-bottom: 2px solid var(--news-color);
     }
 }
-
-
 
 </style>

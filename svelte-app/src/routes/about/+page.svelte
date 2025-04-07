@@ -9,7 +9,7 @@
 <div class="overlay"></div>
 
 <div class="content">
-    <h1 class="reveal-text">About...</h1>
+    <h1 class="reveal-text">About Us</h1>
 </div>
 
 <div class="about-section">
@@ -25,11 +25,12 @@
 
 <style>
     h1{
-        color: white ;
-        border-bottom: 4px solid var(--about-color);
+        padding-top: 4rem;
+        color: var(--about-color);
+        border-bottom: 10px solid var(--about-color);
     }
     .overlay {
-        position: fixed;
+        position: fixed;    
         top: 0;
         left: 0;
         width: 100%;
@@ -86,23 +87,11 @@
         transform: translateY(20px);
         animation: revealText 1s forwards ease-out;
     }
-    
-    .content h1 {
-        padding-top: 10%;
-        font-size: 120px;
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-        transition: text-shadow 0.3s ease, transform 0.3s ease;
-    }
-
-    .content h1:hover {
-        text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-        transform: scale(1.02)
-    }
         
     @keyframes revealText {
         0% {
             opacity: 0;
-            transform: translateY(100px);
+            transform: translateY(50px);
         }
         100% {
             opacity: 1;

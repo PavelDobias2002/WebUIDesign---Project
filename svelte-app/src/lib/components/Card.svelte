@@ -41,7 +41,6 @@
     height : 260px;
   
     top : -50%;
-    left: 8px;
     box-shadow : 0 5px 20px rgba(0,0,0,0.2);
     z-index : 1;
      max-width : 100%;

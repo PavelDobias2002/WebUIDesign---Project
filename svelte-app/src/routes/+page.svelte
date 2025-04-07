@@ -170,9 +170,9 @@
     <a href="/TheMonkey" class="monkey-link">
     <Card title="The Monkey" description="Based on Stephen King's 1980 story" image="./the_monkey.jpg"/>
 </a>
-    <a href="/BridgetJones" class="bridget-link">
+    <!--<a href="/BridgetJones" class="bridget-link">
     <Card title="Bridget Jones: Mad About the Boy" description="She's back!" image="./bridget_jones.jpg"/>
-    </a>
+    </a>-->
 </div>
 </div>
 </div>
@@ -379,7 +379,7 @@
         width: 100%;
         height: 100%;
         backdrop-filter: blur(8px);
-        background-color: rgba(255, 255, 255, 0.4);
+        /*background-color: rgba(255, 255, 255, 0.4);*/
         z-index: -1;
         border-radius: 30px;
         transition: backdrop-filter 0.5s ease, background-color 0.5s ease;
@@ -508,7 +508,7 @@
         content: '';
         position: absolute;
         top: 0;
-        left: -100%;
+        /*left: -100%;*/
         width: 100%;
         height: 100%;
         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);

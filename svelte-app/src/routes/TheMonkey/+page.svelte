@@ -79,6 +79,7 @@
 	.header-container h1{
 		transition: text-shadow 0.3s ease, transform 0.3s ease;
         animation-delay: 0.2s;
+		padding: 5%;
 	}
 	.movie-container .title h3{
 		font-size: 3.5rem;
