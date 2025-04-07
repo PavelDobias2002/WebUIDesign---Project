@@ -1,9 +1,5 @@
-<script>
-    import { scale } from 'svelte/transition';
-</script>
-
+<div class="overlay"></div>
 <div class="page-container">
-    <div class="article-container">
         <div class="article-content">
             <h1>Fallout</h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -24,19 +20,43 @@
                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                  sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-    </div>
 
-    <div class="image">
-        <img src='/fallout.jpg' alt="Bridget Jones movie poster">
-    </div>
+    <div class="image-grid">
+        <div class="image small-image">
+            <img src='/fallout.jpg' alt="NCR from Fallout on Prime">
+        </div>
 
-    <div class="image2">
-        <img src='/fallout-s2.png' alt="Bridget Jones movie poster">
+        <div class="image small-image">
+            <img src='/fallout-s2.png' alt="Leaked NCR Power Armour">
+        </div>
+
+        <div class="image large-image">
+            <img src='/new-vegas.jpg' alt="Fallout promotional image">
+        </div>
     </div>
 
 </div>
 
 <style>
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1rem;
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .small-image {
+        grid-column: span 1;
+    }
+
+    .large-image {
+        grid-column: span 2;
+        grid-row: 2;
+        max-width: 100%;
+    }
 
     .image {
         background-color: #fff;
@@ -45,101 +65,107 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 1;
-        max-width: 450px;
         border-bottom: 10px solid var(--articles-color);
         border-left: 10px solid var(--articles-color);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     
     .image img {
         width: 100%;
         height: 100%;
-        aspect-ratio: 1/1;
         object-fit: cover;
     }
 
-    .image2 {
-        background-color: #fff;
-        border-radius: 20px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        max-width: 450px;
-        border-bottom: 10px solid var(--articles-color);
-        border-left: 10px solid var(--articles-color);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    
-    .image2 img {   
-        width: 100%;
-        height: 100%;
+    .small-image img {
         aspect-ratio: 1/1;
-        object-fit: cover;
+    }
+
+    .large-image img {
+        aspect-ratio: 16/9;
     }
     
     
     .page-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: row;    
         justify-content: space-between;
         align-items: flex-start;
-        padding: 2rem;
+        padding: 5rem 2rem 2rem;
         min-height: 100vh;
         gap: 2rem;
         max-width: 1400px;
         margin: 0 auto;
+        flex-wrap: wrap;
     }
 
-    .article-container {
-        background-color: #fff;
-        border-radius: 20px;
-        overflow: hidden;
-        flex: 2;
+    .article-content {
+        padding: 1rem;
         max-width: 800px;
         width: 100%;
-        border-bottom: 10px solid var(--articles-color);
-        border-left: 10px solid var(--articles-color);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        flex: 2; 
+        text-align: justify; 
     }
-
-
-        .article-content {
-            padding: 2rem;
-        }
-
     h1 {
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
-        color: black;
+        color:white;
+        letter-spacing: 2rem;
+        border-bottom: 4px solid var(--articles-color);
+        text-align: center; 
+        width: 100%; 
     }
 
     p {
         font-family: "Exo 2", sans-serif;
         font-size: 1.2rem;
-        color: rgb(75, 75, 75);
+        color: rgb(255, 255, 255);
         line-height: 1.6;
+        margin-bottom: 1.5rem; 
     }
-
     @media (max-width: 850px) {
         .page-container {
             flex-direction: column;
             align-items: center;
-        }
-        
-        .article-container {
-            max-width: 95%;
-        }
-        
-        .image {
-            max-width: 95%;
-            margin-top: 2rem;
+            padding: 3rem 1rem 1rem; 
         }
         
         .article-content {
-            padding: 1.5rem;
+            max-width: 100%;
+            padding: 1rem;
+            text-align: left; 
+        }
+        
+        .image-grid {
+            width: 95%;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .small-image, .large-image {
+            grid-column: span 1;
+            margin-top: 1rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            letter-spacing: 1rem; 
         }
     }
+
+    @media (min-width: 851px) and (max-width: 1200px) {
+        .image-grid {
+            max-width: 650px;
+        }
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%,
+            rgba(0,0,0,0.4) 60%, 
+            rgba(0,0,0,0.7) 100%);
+        z-index: -1;
+    }   
 </style>
