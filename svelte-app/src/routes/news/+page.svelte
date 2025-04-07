@@ -1,6 +1,8 @@
 <script>
 import { onMount } from 'svelte';
 
+import { scale } from 'svelte/transition';
+
 // data for each news
 let allNews = [
     {
@@ -34,14 +36,14 @@ let news = [...allNews];
 </script>
 <div class="overlay"></div> <!--Overlay over the page background creating subtle gradient-->
 <div class="header-container">  <!--Header with titles-->
-    <h1>News News and more News!</h1>
-    <h2>From Cinema to your screen.</h2>
+    <h1 class="reveal-text">News News and more News!</h1>
+    <h2 class="reveal-text">From Cinema to your screen.</h2>
 </div>
 
-{#if news.length > 0}
+{#if news.length > 0}   <!--if there are any news within the array-->
 		<div class="news-container">
 
-			{#each news as news (news.id)}
+			{#each news as news (news.id)} <!--check for the ids based on the input-->
 
 				<div class="news-article">
 
@@ -70,89 +72,110 @@ let news = [...allNews];
 	{/if}
 
 <style>
-	    .overlay {  /*the gradient on the page background*/
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, 
+
+.overlay 
+{  /*the gradient on the page background*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
             rgba(0,0,0,0.2) 0%,
             rgba(0,0,0,0.4) 60%, 
             rgba(0,0,0,0.7) 100%);
-        z-index: -1;
+    z-index: -1;
+}
+
+.header-container h1
+{   /*Style for the main heading*/
+    font-family: 'Pixelify Sans', sans-serif;
+    font-optical-sizing: auto;
+    padding-top:5%;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--news-color);
+}
+
+.reveal-text 
+{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealText 1s forwards ease-out;
+}
+
+@keyframes revealText 
+{
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
     }
-
-    .header-container h1{   /*Style for the main heading*/
-        font-family: 'Pixelify Sans', sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-        -webkit-text-stroke: 2px var(--news-color);
-        color: transparent;
-        transition: transform 0.3s ease;
-        animation: strokeTransition 2s ease-in-out infinite alternate;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    
+.header-container h2
+{ /*style for sub heading*/
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 4rem;
+    font-style: normal;
+    border-bottom: 4px solid var(--news-color);
+}
 
-    .header-container h2{ /*style for sub heading*/
-        font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-size: 4rem;
-        font-style: normal;
-        border-bottom: 4px solid var(--news-color);
-    }
+.news-container h3
+{ /*Style for heading within the news article divs*/
+	font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
 
-	.news-container h3{ /*Style for heading within the news article divs*/
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 2rem;
-
-        border-bottom: 2px solid var(--news-color);
+    border-bottom: 2px solid var(--news-color);
 		
-		letter-spacing: 2px;
-		text-transform: uppercase;
-	}
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
 
-    .news-container h4{ /*Style for heading within the news article divs*/
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.5rem;
-		
-		
-	}
+.news-container h4
+{ /*Style for heading within the news article divs*/
+	font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+}
 	
-	.news-container p{ /*Style for paragraphs within the news article divs*/
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.25rem;
+.news-container p
+{ /*Style for paragraphs within the news article divs*/
+	font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.25rem;
+}
 
-        
-	}
-	.news-container > div{ /*referfers to each div that is within the news container*/
-		background-color: rgba(16, 16, 16, 0.6);
-		border-radius:30px;
-		padding:1.5rem;
-	}
-    
-    .news-article:hover {   /*When hover on the article it goes up to emphasize clickability*/
-        margin-top: 5px;
-        transform: translateY(-10px);
-        border-bottom: 10px solid var(--news-color);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    /* mobile first - from smallest screen to the biggest transition: all 0.3s ease;*/
+.news-container > div
+{ /*referfers to each div that is within the news container*/
+	background-color: rgba(16, 16, 16, 0.6);
+	border-radius:30px;
+	padding:1.5rem;
+}
 
-/* Base styles (desktop first) */
-.news-container {
+.news-article:hover 
+{   /*When hover on the article it goes up to emphasize clickability*/
+    margin-top: 5px;
+    transform: translateY(-10px);
+    border-bottom: 10px solid var(--news-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Base layout (desktop first) */
+.news-container 
+{
     display: grid;
     grid-template-columns: repeat(1, 1fr); 
     grid-template-rows: auto auto auto;
@@ -163,7 +186,8 @@ let news = [...allNews];
     margin: auto;
 }
 
-.news-article {
+.news-article 
+{
     display: grid;
     grid-template-columns: 2fr 4fr 1fr;
     gap: 1.5rem;
@@ -173,20 +197,23 @@ let news = [...allNews];
 }
 
 /* Base article layout (desktop) */
-.title {
+.title 
+{
     grid-area: 1 / 1 / 1 / 2;
     border-right: 2px solid rgba(62, 62, 62, 0.3);
     padding-right: 1rem;
     text-align: left;
 }
 
-.paragraph {
+.paragraph 
+{
     grid-area: 1 / 2 / 1 / 2;
     padding: 0 1rem;
     text-align: left;
 }
 
-.date {
+.date 
+{
     grid-area: 1 / 3 / 1 / 3;
     text-align: right;
     border-left: 2px solid rgba(62, 62, 62, 0.3);
@@ -194,7 +221,8 @@ let news = [...allNews];
 }
 
 /* Hover effects for desktop */
-.news-article:hover {
+.news-article:hover 
+{
     margin-top: 5px;
     transform: translateY(-10px);
     border-bottom: 10px solid var(--news-color);
@@ -202,7 +230,8 @@ let news = [...allNews];
 }
 
 /* Tablet breakpoint (max-width: 1024px) */
-@media screen and (max-width: 64em) {
+@media screen and (max-width: 64em) 
+{
     .news-container {
         width: 90%;
         padding: 1.5rem;
@@ -235,7 +264,8 @@ let news = [...allNews];
 }
 
 /* Mobile breakpoint (max-width: 768px) */
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 48em) 
+{
     .news-container {
         width: 95%;
         padding: 1rem;

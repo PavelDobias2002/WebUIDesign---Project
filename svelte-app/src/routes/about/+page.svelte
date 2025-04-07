@@ -88,6 +88,7 @@
     }
     
     .content h1 {
+        padding-top: 5%;
         font-size: 120px;
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         transition: text-shadow 0.3s ease, transform 0.3s ease;
@@ -101,7 +102,7 @@
     @keyframes revealText {
         0% {
             opacity: 0;
-            transform: translateY(100px);
+            transform: translateY(50px);
         }
         100% {
             opacity: 1;

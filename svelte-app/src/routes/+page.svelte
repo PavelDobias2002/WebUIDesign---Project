@@ -128,7 +128,8 @@
 <div class="parallax-container">
     <div class="card-backdrop"></div>
     <div class="card-menu" bind:this={cardContainer}>
-        <Card2 title="News" description="Real talk on what’s hot (and what’s not)!" image="./news_icon.png"/>
+        <a href='/news' class="news-card-link">
+        <Card2 title="News" description="Real talk on what’s hot (and what’s not)!" image="./news_icon.png"/> </a>
         <Card2 title="Articles" description="Dive into fun reads with fresh takes." image="./articles_icon.png"/>
         <Card2 title="Reviews" description="Stay in the loop with the latest buzz!" image="./reviews_icon.png"/>
     </div>
@@ -169,9 +170,9 @@
     <a href="/TheMonkey" class="monkey-link">
     <Card title="The Monkey" description="Based on Stephen King's 1980 story" image="./the_monkey.jpg"/>
 </a>
-    <a href="/BridgetJones" class="bridget-link">
+    <!--<a href="/BridgetJones" class="bridget-link">
     <Card title="Bridget Jones: Mad About the Boy" description="She's back!" image="./bridget_jones.jpg"/>
-    </a>
+    </a>-->
 </div>
 </div>
 </div>
@@ -225,7 +226,7 @@
         justify-content: flex-start;
         pointer-events: auto; /* Enable clicks on the content */
         transition: transform 0.5s ease, opacity 0.5s ease;
-        will-change: transform, opacity;
+        min-height: auto; /* Allow content to determine height */
     }
      
     .overlay {
@@ -378,7 +379,7 @@
         width: 100%;
         height: 100%;
         backdrop-filter: blur(8px);
-        background-color: rgba(255, 255, 255, 0.4);
+        /*background-color: rgba(255, 255, 255, 0.4);*/
         z-index: -1;
         border-radius: 30px;
         transition: backdrop-filter 0.5s ease, background-color 0.5s ease;
@@ -449,19 +450,21 @@
         border-radius:50px;
         position: relative;
         z-index: 10; /* Higher z-index to appear above the cards */
-        margin-top: 40px; /* Increased margin for better spacing */
-        padding: 10px;
+        margin-top: 20px; /* Reduced margin for closer spacing */
+        padding: 1rem;
         box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+        height: auto;
+        min-height: 400px;
     }
     .content2 h2{
         font-size: 60px;
         color:black;
         text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         transition: text-shadow 0.3s ease, transform 0.3s ease;
-        
+        margin-bottom: 1rem;
     } 
     .cinema-news{
         background-color: rgba(154, 154, 154, 0.6);
@@ -471,6 +474,8 @@
         grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
         margin-top:10px;
         place-items: center;
+        padding: 2rem;
+        gap: 20px;
     }
 
     .suggest-button{
@@ -503,7 +508,7 @@
         content: '';
         position: absolute;
         top: 0;
-        left: -100%;
+        /*left: -100%;*/
         width: 100%;
         height: 100%;
         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
@@ -590,51 +595,308 @@
         line-height: 1.5;
         text-align: center;
     }
-  /*  
-    .gallery-container
-    {
-        background-color:rgb(215, 213, 210);
-        padding:2rem;
-        border-radius: 50px;
+
+       
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            .changing-background2 {
+                height: 100dvh;
+                width: 100vw; /*full viewport*/
+                background-position: center;
+            }
+            /*hero section text centered, resized*/
+            .content {
+                padding: 1rem;
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .content h1 {
+                font-size: 2.5rem;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+
+            .content p {
+                font-size: 1.2rem;
+                width: 90%;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+
+            .parallax-container {
+                margin: 0;
+                padding: 1rem;
+                width:100%;
+            }
+            /*card menu stacked to one column*/
+            .card-menu {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                width: 90%;
+                margin: 1rem auto;
+                padding: 2rem 1rem;
+                background-color: transparent;
+            }
+            /*no backdrop background for mobile version*/
+            .card-backdrop {
+               visibility: hidden;
+            }
+            .movie-backdrop {
+                visibility: hidden;
+            }
+
+            .parallax-container2 {
+                margin: 2rem 0;
+                width: 100%;
+            }
+
+            .content2 {
+                padding: 1rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            .content2 h2 {
+                font-size: 2rem;
+                width: 90%;
+                margin-bottom: 0.5rem;
+                padding: 0 10px;
+            }
+
+            .movie-calendar {
+                width: 100%;
+                margin-top: 10px;
+                padding: 1rem 0;
+                min-height: 300px; /*container at least 300px tall*/
+            }
+
+            .cinema-news {
+                display: flex;
+                flex-wrap: nowrap; /*cards stay on a row*/
+                overflow-x: auto; /*horizontal scrolling*/
+                overflow-y: visible; /*vertical overflow cards are taller than their container */
+                scroll-snap-type: x mandatory; /*snap scrolling for horizontal scrolling, when the csrolling ends, items are snapped to place*/
+                scroll-behavior: smooth; /*scrolling type-smooth*/
+                -webkit-overflow-scrolling: touch; /*smooth scrolling for example for iphones*/
+                padding: 2rem 1rem;
+                gap: 15px;
+                background-color: transparent;
+                margin-top: 0;
+            }
+
+            .cinema-news::-webkit-scrollbar {
+                display: none; /*hide scrollbar- looks cleaner*/
+            }
+
+            .cinema-news a {
+                flex: 0 0 auto; /*prevents items from shrinking*/
+                width: 180px; /* Smaller card width */
+                scroll-snap-align: start; /*aligns items to the start of scrolling area*/
+            }
+
+            /* Make cards sit on top */
+            :global(.cinema-news .card) {
+                transform-origin: bottom;
+                height: auto;
+                max-height: 280px; /* Control card height */
+            }
+
+            /* Update positioning for better visibility */
+            .movie-calendar::after {
+                bottom: 20px;
+                top: auto;
+                transform: none;
+            }
+
+
+            .suggest-button {
+                width: 90%;
+                margin: 2rem auto;
+            }
+
+            .suggest-button button {
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .suggest-button button h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .expanded-content p {
+                font-size: 1rem;
+                text-align: center;
+                padding: 0 10px;
+            }
     }
 
-     
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px; 
-        margin-top: 2rem;
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .changing-background2 {
+                height: 100dvh;
+                width: 100vw;
+                background-position: center;
+                position:fixed;
+            }
+
+            .content {
+                padding: 1rem;
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .content h1 {
+                font-size: 3.5rem;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+
+            .content p {
+                font-size: 2.2rem;
+                width: 90%;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+
+            .parallax-container {
+                margin: 0;
+                padding: 2rem;
+                width: 100%;
+            }
+
+            .card-menu {
+                /*same layout as for desktop but adapted for tablet screen*/
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                place-items: center;
+                position: relative;
+                margin:auto;
+                width:100%;
+            }
+
+            :global(.card-menu .card2)
+            /*cards in the card-menu resized*/ {
+            width: 100%;
+             max-width: 250px;
+            height: auto;
+            aspect-ratio: 0.5;
+             }
+            .card-backdrop {
+               visibility: hidden;
+            }
+            .movie-backdrop {
+                visibility: hidden;
+            }
+
+            .parallax-container2 {
+                margin: 2rem 0;
+                width: 100%;
+            }
+
+            .content2 {
+                padding: 1rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            .content2 h2 {
+                font-size: 2.5rem;
+                width: 90%;
+                margin-bottom: 0.5rem;
+                padding: 0 10px;
+            }
+            .movie-calendar {
+                width: 100%;
+                margin-top: 10px;
+                padding: 1rem 0;
+                min-height: 500px;
+            }
+
+            .cinema-news {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overflow-y: visible;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                padding: 2rem 1rem;
+                gap: 25px;
+                background-color: transparent;
+                margin-top: 0;
+            }
+
+            .cinema-news::-webkit-scrollbar {
+                display: none;
+            }
+
+            .cinema-news a {
+                flex: 0 0 auto;
+                width: 230px; /* Smaller card width */
+                scroll-snap-align: start;
+            }
+
+            /* Make cards sit on top */
+            :global(.cinema-news .card) {
+                transform-origin: bottom;
+                height: auto;
+                max-height: 320px; /* Control card height */
+            }
+
+            /* positioning for better visibility */
+            .movie-calendar::after {
+                bottom: 20px;
+                top: auto;
+                transform: none;
+            }
+
+
+            .suggest-button {
+                width: 90%;
+                margin: 2rem auto;
+            }
+
+            .suggest-button button {
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .suggest-button button h3 {
+                font-size: 2.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .expanded-content p {
+                font-size: 2rem;
+                text-align: center;
+                padding: 0 10px;
+            }
+
     }
 
-    .gallery::before {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
 
 
-    .gallery::after {
-        content:"";
-        width:60%;
-        height:3px;
-        background: linear-gradient(to right, rgb(102, 225, 188), transparent);
-        
-}
-.text-content-gallery{
-    display:flex;
-    justify-content: left;
-    align-items: center;
-}
-
-.text-content-gallery h2{
-    font-size: 70px;
-    background: linear-gradient(to right, rgb(22, 234, 128), rgb(234, 22, 199));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-:global(.gallery> .card:hover ~ .card) {
-        transform: scale(0.9);
-        opacity: 0.8;
-    }
-*/
 </style>

@@ -45,7 +45,12 @@
 	</div>
 	<div class="trailer">
 		<h3>trailer</h3>
-		<iframe src="https://www.youtube.com/embed/1aayuOp0AnE?si=tqPXLA3rEoCbAo-p"></iframe>
+		<iframe src="https://www.youtube.com/embed/1aayuOp0AnE?si=tqPXLA3rEoCbAo-p"
+		title="The Alto Kings trailer"
+		frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+		allowfullscreen>
+	</iframe>
 	</div>
 	
 </div>
@@ -66,12 +71,8 @@
 	.header-container h1{
 		transition: text-shadow 0.3s ease, transform 0.3s ease;
         animation-delay: 0.2s;
+		padding: 5%;
 	}
-	.header-container h2{
-		transition: text-shadow 0.3s ease, transform 0.3s ease;
-        animation-delay: 0.5s;
-	}
-
 	.movie-container .title h3{
 		font-size: 3.5rem;
 		color:black;
@@ -176,5 +177,159 @@
             transform: translateY(0);
         }
     }
+	@media (max-width: 768px) {
+		.header-container h1{
+			font-size: 2.5rem;
+		}
+ 		.movie-container {
+ 			grid-template-columns: 1fr;
+ 			gap:20px;
+ 			width:100%;
+ 			padding:2rem;
+			 margin: 5vh auto;
+ 			background-color:  rgba(155, 85, 5, 0.6);
+ 			border-radius:30px;
+			justify-content:center;
+			place-items:center;
+ 		}
+ 		.movie-container > div p{
+ 			font-size:1.2rem;
+ 		}
+		.movie-container > div{
+			padding:0.3rem;
+			max-width:90%;
+			background-color: transparent;
+			box-shadow: none;
+			border-bottom: 4px solid rgb(66, 22, 1);
+		}
+ 		.image{
+ 			grid-area: 2 / 1 / 3 / 2;
+ 		}
+ 		.title{
+ 			grid-area: 1 / 1 / 2 / 2;
+ 		}
+ 		.movie-container .title h3{
+ 			font-size: 2rem;
+ 		}
+ 		.genre{
+ 			grid-area: 3 / 1 / 4 / 2;
+ 		}
+ 		.director {
+ 			grid-area: 4 /1/5/2;
+ 			height: 100%;
+ 		}
+ 		.production {
+ 			grid-area: 5/1/6/2;
+ 		}
+ 		.cast {
+ 		grid-area: 6 / 1 / 7 / 2;
+ 	
+ 		}
+ 		.cinemasIreland {
+ 		grid-area: 7/1/8/2;
+ 	
+ 		}
+ 		.description {
+ 		grid-area: 8 / 1 / 9 / 2;
+ 	
+ 		}
+ 	.trailer {
+ 	grid-area: 9 / 1 / 10 / 2;
+ 	overflow:hidden;
+ 	position:relative;
+	width:100%;
+	height: 350px;
+ 	}
+	.trailer iframe{
+		width:100%;
+		height: 100%;
+		position: relative;
+	}
+
+
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+
+	.header-container h1{
+		font-size: 3rem;
+	}
+    .movie-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 90%;
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+    
+    .title {
+        grid-area: 1 / 1 / 2 / 3;
+        text-align: center;
+    }
+    
+    .image {
+        grid-area: 2 / 1 / 3 / 3;
+        width: 100%;
+        height: auto;
+    }
+    
+    .genre {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+    .director {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    
+    .production {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    
+    .cast {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+	.cinemasIreland{
+		grid-area: 5 / 1 / 6 / 3;
+	}
+    
+    .description {
+        grid-area: 6 / 1 / 7 / 3;
+    }
+    
+    .trailer {
+        grid-area: 7 / 1 / 8 / 3;
+		position:relative;
+		width:100%;
+        height: 400px;
+    }
+	.trailer iframe{
+		width:100%;
+		height: 100%;
+		position: relative;
+	}
+    .movie-container .title h3 {
+        font-size: 2.5rem;
+    }
+    
+    .movie-container > div {
+        height: auto;
+        min-height: fit-content;
+		box-shadow: 0 0 15px rgba(212, 212, 212, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .movie-container > div h3 {
+        margin-bottom: 1rem;
+    }
+    
+    .movie-container > div p {
+        margin: 0.5rem 0;
+		font-size: 1.5rem;
+    }
+}
+	
 
 </style>

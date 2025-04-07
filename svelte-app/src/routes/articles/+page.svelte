@@ -53,16 +53,11 @@
 
 <style>
     h1 {
+        padding-top: 5%;
         text-align: center;
-        color: white;
+        color: var(--articles-color);
         font-size: 120px;
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-        transition: text-shadow 0.3s ease, transform 0.3s ease;
-    }
-    
-    h1:hover {
-        text-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-        transform: scale(1.02)
+        margin-bottom: 2rem;
     }
 
     .article-grid {
@@ -98,7 +93,7 @@
     @keyframes revealText {
         0% {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(50px);
         }
         100% {
             opacity: 1;
