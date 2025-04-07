@@ -27,7 +27,7 @@
         };
     }
 </script>
-
+<div class="header"><h1>Contact us</h1></div>
 <div class="form-container">
     <form on:submit={handleSubmit} class="contact-form">
         <h2>Suggest new content!</h2>
@@ -103,6 +103,9 @@
 {/if}
 
 <style>
+    .header{
+        padding-top:5%;
+    }
     .modal {
         position: fixed;
         top: 0;
@@ -326,6 +329,9 @@
 
     /*phone*/
     @media (max-width: 768px) {
+        .header h1{
+            font-size: 2rem;
+        }
         .form-row {
             flex-direction: column;
             gap: 1rem;
@@ -353,6 +359,9 @@
 
         /*tablet*/
         @media (max-width: 992px){
+            .header h1{
+            font-size: 4rem;
+        }
             .contact-form h2{
                 font-size: 1.8rem;
             }
