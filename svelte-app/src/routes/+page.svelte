@@ -379,7 +379,7 @@
         width: 100%;
         height: 100%;
         backdrop-filter: blur(8px);
-        background-color: rgba(255, 255, 255, 0.4);
+        /*background-color: rgba(255, 255, 255, 0.4);*/
         z-index: -1;
         border-radius: 30px;
         transition: backdrop-filter 0.5s ease, background-color 0.5s ease;

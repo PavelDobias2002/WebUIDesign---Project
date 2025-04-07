@@ -121,218 +121,215 @@ function handleSearch() {
 
 <style>
 
-.reviews-container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 20px;
-	}
+/*search bar styles*/
+.search-container 
+{
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	font-family: "Exo 2", sans-serif;
+}
 
-	.search-container {
-		margin-top: 2rem;
-		margin-bottom: 1rem;
-		font-family: "Exo 2", sans-serif;
-	}
+.search-bar 
+{
+	display: flex;
+	position: relative;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.search-bar input 
+{
+	flex: 1;
+	padding: 12px 15px;
+	border: 2px solid var(--reviews-color);
+	border-radius: 4px 0 0 4px;
+	font-size: 16px;
+	outline: none;
+	transition: border-color 0.3s;
+}
+
+.search-bar input:focus 
+{
+	border-color: var(--reviews-color);
+}
+
+.search-button 
+{
+	background-color: var(--reviews-color);
+	border: none;
+	padding: 12px 20px;
+	border-radius: 0 4px 4px 0;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s;
+}
+
+.search-button:hover 
+{
+	background-color: #357ac5;
+}
+
+.search-results 
+{
+	margin-top: 10px;
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+}
+
+/* Responsive design for search bar */
+
+@media (max-width: 480px) 
+{
 
 	.search-bar {
-		display: flex;
-		position: relative;
-		max-width: 1000px;
-		margin: 0 auto;
+		flex-direction: column;
 	}
 
 	.search-bar input {
-		flex: 1;
-		padding: 12px 15px;
-		border: 2px solid var(--reviews-color);
-		border-radius: 4px 0 0 4px;
-		font-size: 16px;
-		outline: none;
-		transition: border-color 0.3s;
-	}
-
-	.search-bar input:focus {
-		border-color: var(--reviews-color);
+		border-radius: 4px;
+		margin-bottom: 10px;
 	}
 
 	.search-button {
-		background-color: var(--reviews-color);
-		border: none;
-		padding: 12px 20px;
-		border-radius: 0 4px 4px 0;
-		cursor: pointer;
-		font-size: 16px;
-		transition: background-color 0.3s;
+		border-radius: 4px;
+		width: 100%;
 	}
 
-	.search-button:hover {
-		background-color: #357ac5;
-	}
+}
 
-	.search-results {
-		margin-top: 10px;
-		text-align: center;
-		color: #666;
-		font-size: 14px;
-	}
-
-	/* Responsive adjustments */
-
-	@media (max-width: 480px) {
-
-		.search-bar {
-			flex-direction: column;
-		}
-
-		.search-bar input {
-			border-radius: 4px;
-			margin-bottom: 10px;
-		}
-
-		.search-button {
-			border-radius: 4px;
-			width: 100%;
-		}
-
-		.clear-button {
-			right: 10px;
-		}
-	}
-
-	    .overlay {  /*the gradient on the page background*/
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, 
+.overlay 
+{  /*the gradient on the page background*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, 
             rgba(0,0,0,0.2) 0%,
             rgba(0,0,0,0.4) 60%, 
             rgba(0,0,0,0.7) 100%);
-        z-index: -1;
-    }
+    z-index: -1;
+}
 
-    .header-container h1{   /*Style for the main heading*/
-		padding-top: 5%;
-		text-align: center;
-		align-items: center;
-        font-family: 'Pixelify Sans', sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-		color: var(--reviews-color);
-        /*-webkit-text-stroke: 2px var(--reviews-color);*/
-        /*color: transparent;*/
-        /*transition: transform 0.3s ease;*/
-        /*animation: strokeTransition 2s ease-in-out infinite alternate;*/
-		border-bottom: 4px solid var(--reviews-color);
-    }
+.reviews-container 
+{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
 
-	.reveal-text {
+.header-container h1
+{   /*Style for the main heading*/
+	padding-top: 5%;
+	text-align: center;
+	align-items: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+	color: var(--reviews-color);
+	border-bottom: 4px solid var(--reviews-color);
+}
+
+.reveal-text 
+{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealText 1s forwards ease-out;
+}
+
+@keyframes revealText 
+{
+    0% {
         opacity: 0;
-        transform: translateY(20px);
-        animation: revealText 1s forwards ease-out;
+        transform: translateY(50px);
     }
-
-	@keyframes revealText {
-        0% {
-            opacity: 0;
-            transform: translateY(50px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    .header-container h2{ /*style for sub heading*/
-        font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-size: 5rem;
-        font-style: normal;
-        border-bottom: 4px solid var(--reviews-color);
-    }
+.reviews-container h1
+{ /*Style for heading within the news article divs*/
+	font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4rem;
 
-	.reviews-container h1{ /*Style for heading within the news article divs*/
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 4rem;
-
-        border-bottom: 2px solid var(--reviews-color);
+    border-bottom: 2px solid var(--reviews-color);
 		
-		letter-spacing: 2px;
-		text-transform: uppercase;
-	}
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
 
-	.reviews-container h3{ /*Style for heading within the news article divs*/
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 2rem;
+.reviews-container h3
+{ /*Style for heading within the news article divs*/
+	font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
 
-        border-bottom: 2px solid var(--reviews-color);
+    border-bottom: 2px solid var(--reviews-color);
 		
-		letter-spacing: 2px;
-		text-transform: uppercase;
-	}
-
-    .reviews-container h4{ /*Style for heading within the news article divs*/
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.5rem;
-		
-		
-	}
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
 	
-	.reviews-container p{ /*Style for paragraphs within the news article divs*/
-		font-family: "Exo 2", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.25rem;
+.reviews-container p
+{ /*Style for paragraphs within the news article divs*/
+	font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.25rem;
+}
 
-        
-	}
-	.reviews-container > div{ /*referfers to each div that is within the news container*/
-		background-color: rgba(16, 16, 16, 0.6);
-		border-radius:30px;
-		padding:1.5rem;
-	}
-    .reviews-container{    /*the grid system used for the news container*/
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); 
-        grid-template-rows: auto auto auto;
-        gap: 2rem;
-		padding:2rem;
-        width:80%;
-        max-width: 1600px;
-        margin:auto;
-    }
+.reviews-container > div
+{ /*referfers to each div that is within the news container*/
+	background-color: rgba(16, 16, 16, 0.6);
+	border-radius:30px;
+	padding:1.5rem;
+}
 
-    .review-item{ /*grid system for the news articles*/
-        display: grid;
-        grid-template-columns: 2fr 4fr 1fr;
-        gap: 1.5rem;
-        transition: all 0.3s ease;
-        border: 2px solid var(--reviews-color);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
+.reviews-container
+{    /*the grid system used for the news container*/
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: auto auto auto;
+    gap: 2rem;
+	padding:2rem;
+    width:80%;
+    max-width: 1600px;
+    margin:auto;
+}
 
-	.review-heading:hover{
-		color: var(--reviews-color);
-	}
+.review-item
+{ /*grid system for the news articles*/
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--reviews-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 
-	.review-footer {
-		border-top: 2px solid var(--reviews-color);
-	}
+.review-heading:hover
+{
+	color: var(--reviews-color);
+}
+
+.review-footer 
+{
+	border-top: 2px solid var(--reviews-color);
+}
 
 
-.image1{
+.image1
+{
 	border-radius: 10px;
 	width:100%;
 	height:100%;
@@ -340,10 +337,11 @@ function handleSearch() {
     align-items: center;
 }
 
- .image1:hover {   /*When hover on the article it goes up to emphasize clickability*/
+.image1:hover 
+{   /*When hover on the article it goes up to emphasize clickability*/
     border: 5px solid var(--reviews-color);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
+}
 
 
 /*where the elements of the news article are within the div*/
@@ -395,10 +393,6 @@ function handleSearch() {
         border-top: 2px solid rgba(62, 62, 62, 0.3);
         padding-top: 1rem;
     }
-
-    .header-container h2 {
-        font-size: 3rem;
-    }
 }
 
 /* Mobile breakpoint (max-width: 768px) */
@@ -440,16 +434,8 @@ function handleSearch() {
         font-size: 2.5rem;
     }
 
-    .header-container h2 {
-        font-size: 2rem;
-    }
-
     .reviews-container h3 {
         font-size: 1.75rem;
-    }
-
-    .reviews-container h4 {
-        font-size: 1.25rem;
     }
 
     .reviews-container p {
