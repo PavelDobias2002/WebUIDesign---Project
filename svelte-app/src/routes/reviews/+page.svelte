@@ -21,7 +21,7 @@ let allReviews = [
 		image: 'nosferatuPoster.jpg',
         title: 'Nosferatu',
         rating: 7,
-        content: 'An amazing movie!',
+        content: 'a landmark in horror cinema. This silent film, loosely based on Dracula, introduces the unforgettable Count Orlok, played by Max Schreck, whose grotesque appearance and eerie performance have become iconic. The films use of shadows, distorted angles, and expressionist techniques creates a haunting atmosphere that lingers long after the credits roll. Murnaus masterful direction and Fritz Arno Wagners cinematography make Nosferatu a chilling, visually striking experience, and its influence on the horror genre is undeniable. Even after more than a century, it remains a terrifying and innovative classic.',
 		genre: 'horror',
 		director: 'Robert Eggers',
         author: 'Pavel Dobias',
@@ -29,14 +29,91 @@ let allReviews = [
     },
     {
         id: 3,
-		image: 'nigthmare.jpg',
+		image: 'mickey17poster.jpg',
         title: 'Mickey 17',
         rating: 9,
-        content: 'I love this movie',
+        content: 'a sci-fi film starring Robert Pattinson as Mickey Barnes, an "Expendable" worker on a distant planet who faces repeated deaths and rebirths. The film blends dark humor with themes of corporate exploitation and cloning. Critics have praised Pattinson’s performance, but the narrative is seen as uneven. While some find it a quirky, inventive film, others criticize its meandering plot and tonal inconsistencies. Overall, Mickey 17 is a unique and thought-provoking experience, though its complexity may not be for everyone.',
 		genre: 'animated horror',
 		director: 'Tim Burton',
         author: 'Pavel Dobias',
         date: '1994'
+    },
+    {
+        "id": 4,
+        "image": "thewhaleposter.jpg",
+        "title": "The Whale",
+        "rating": 8,
+        "content": "A powerful drama starring Brendan Fraser as a reclusive English teacher who is struggling with obesity and trying to reconnect with his estranged daughter. The film is emotionally intense, with Fraser delivering a standout performance. While the story’s heaviness may be difficult for some, the film is a poignant exploration of redemption and self-worth.",
+        "genre": "drama",
+        "director": "Darren Aronofsky",
+        "author": "Samuel D. Hunter",
+        "date": "2022"
+    },
+    {
+        "id": 5,
+        "image": "barbieposter.jpg",
+        "title": "Barbie",
+        "rating": 7,
+        "content": "A visually vibrant comedy that brings the iconic doll to life in a satirical exploration of gender, identity, and societal expectations. Margot Robbie shines in the lead role, and the film’s playful yet insightful humor tackles contemporary issues. While it may not be for everyone, *Barbie* is a fresh take on the traditional family film.",
+        "genre": "comedy, fantasy",
+        "director": "Greta Gerwig",
+        "author": "Greta Gerwig",
+        "date": "2023"
+    },
+    {
+        "id": 6,
+        "image": "dunkirkposter.jpg",
+        "title": "Dunkirk",
+        "rating": 9,
+        "content": "Christopher Nolan’s gripping World War II thriller, which chronicles the evacuation of British troops from Dunkirk, France. With minimal dialogue and a relentless sense of urgency, the film immerses viewers in the chaos and heroism of war. The impeccable cinematography, Hans Zimmer’s score, and stellar performances make *Dunkirk* a breathtaking cinematic experience.",
+        "genre": "war, thriller",
+        "director": "Christopher Nolan",
+        "author": "Christopher Nolan",
+        "date": "2017"
+    },
+    {
+        "id": 7,
+        "image": "spiderverseposter.jpg",
+        "title": "Spider-Man: Into the Spider-Verse",
+        "rating": 10,
+        "content": "A groundbreaking animated superhero film that brings together multiple versions of Spider-Man from various dimensions. With stunning animation, a compelling storyline, and fantastic voice performances, *Into the Spider-Verse* revolutionized the genre and set a new standard for animated films. It’s a vibrant, emotional, and visually spectacular experience.",
+        "genre": "animated, action",
+        "director": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
+        "author": "Phil Lord, Rodney Rothman",
+        "date": "2018"
+    },
+    {
+        "id": 8,
+        "image": "herposter.jpg",
+        "title": "Her",
+        "rating": 8,
+        "content": "A thought-provoking sci-fi romance that follows a man who develops a relationship with an artificial intelligence operating system. Directed by Spike Jonze, *Her* is a meditative exploration of loneliness, love, and human connection in a digital age. Joaquin Phoenix’s heartfelt performance, combined with the film’s beautiful visuals and score, makes this an unforgettable film.",
+        "genre": "sci-fi, romance",
+        "director": "Spike Jonze",
+        "author": "Spike Jonze",
+        "date": "2013"
+    },
+    {
+        "id": 9,
+        "image": "shutterislandposter.jpg",
+        "title": "Shutter Island",
+        "rating": 8,
+        "content": "A psychological thriller directed by Martin Scorsese, starring Leonardo DiCaprio as a U.S. Marshal investigating the disappearance of a patient from a mental institution on an isolated island. With a twisting narrative, eerie atmosphere, and a shocking climax, *Shutter Island* keeps viewers on the edge of their seats throughout.",
+        "genre": "thriller, mystery",
+        "director": "Martin Scorsese",
+        "author": "Dennis Lehane",
+        "date": "2010"
+    },
+    {
+        "id": 10,
+        "image": "madmaxfuryroadposter.jpg",
+        "title": "Mad Max: Fury Road",
+        "rating": 9,
+        "content": "An explosive, high-octane action film set in a dystopian wasteland, directed by George Miller. Tom Hardy stars as Max, who teams up with Imperator Furiosa (Charlize Theron) to escape a tyrannical warlord. With stunning practical effects, relentless action sequences, and a visually stunning world, *Mad Max: Fury Road* is a modern action classic.",
+        "genre": "action, adventure",
+        "director": "George Miller",
+        "author": "George Miller, Brendan McCarthy, Nico Lathouris",
+        "date": "2015"
     }
 ];
 

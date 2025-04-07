@@ -1,6 +1,8 @@
 <script>
 import { onMount } from 'svelte';
 
+import { scale } from 'svelte/transition';
+
 // data for each news
 let allNews = [
     {
@@ -95,6 +97,25 @@ let news = [...allNews];
     color: var(--news-color);
 }
 
+.reveal-text 
+{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealText 1s forwards ease-out;
+}
+
+@keyframes revealText 
+{
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .header-container h2
 { /*style for sub heading*/
     font-family: "Exo 2", sans-serif;
@@ -150,25 +171,6 @@ let news = [...allNews];
     transform: translateY(-10px);
     border-bottom: 10px solid var(--news-color);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.reveal-text 
-{
-    opacity: 0;
-    transform: translateY(20px);
-    animation: revealText 1s forwards ease-out;
-}
-
-@keyframes revealText /*animation for reveal text*/
-{
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Base layout (desktop first) */
