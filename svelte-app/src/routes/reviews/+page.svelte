@@ -1,6 +1,8 @@
 <script>
 import { onMount } from 'svelte';
 
+import { scale } from 'svelte/transition';
+
 // data for each review
 let allReviews = [
     {
@@ -30,7 +32,7 @@ let allReviews = [
 		image: 'nigthmare.jpg',
         title: 'Mickey 17',
         rating: 9,
-        content: 'An amazing movie!',
+        content: 'I love this movie',
 		genre: 'animated horror',
 		director: 'Tim Burton',
         author: 'Pavel Dobias',
@@ -60,7 +62,7 @@ function handleSearch() {
 </script>
 <div class="overlay"></div> <!--Overlay over the page background creating subtle gradient-->
 <div class="header-container">  <!--Header with titles-->
-    <h1>Reviews</h1>
+    <h1 class="reveal-text">Reviews</h1>
 </div>
 
 	<div class="search-container">
@@ -87,13 +89,13 @@ function handleSearch() {
 				<div class="review-item">
 
 					<div class="title">
-						<a href="/newsArticle">
+						<a href="">
 						<img class="image1" src={review.image} alt = "image">
 						</a>
 					</div>
 
 					<div class="paragraph">
-						<a href="/newsArticle">
+						<a href="">
 						<h3 class="review-heading">{review.title}</h3>
 						</a>
 						<p>
@@ -210,19 +212,37 @@ function handleSearch() {
     }
 
     .header-container h1{   /*Style for the main heading*/
-		padding-top: 10%;
+		padding-top: 5%;
+		text-align: center;
+		align-items: center;
         font-family: 'Pixelify Sans', sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
-        -webkit-text-stroke: 2px var(--reviews-color);
-        color: transparent;
-        transition: transform 0.3s ease;
-        animation: strokeTransition 2s ease-in-out infinite alternate;
+		color: var(--reviews-color);
+        /*-webkit-text-stroke: 2px var(--reviews-color);*/
+        /*color: transparent;*/
+        /*transition: transform 0.3s ease;*/
+        /*animation: strokeTransition 2s ease-in-out infinite alternate;*/
 		border-bottom: 4px solid var(--reviews-color);
     }
 
-    
+	.reveal-text {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: revealText 1s forwards ease-out;
+    }
+
+	@keyframes revealText {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
     .header-container h2{ /*style for sub heading*/
         font-family: "Exo 2", sans-serif;
@@ -346,6 +366,95 @@ function handleSearch() {
     text-align: right;
     border-left: 2px solid rgba(62, 62, 62, 0.3);
     padding-left: 2rem;
+}
+
+/* Tablet breakpoint (max-width: 1024px) */
+@media screen and (max-width: 64em) {
+    .reviews-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .review-item {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+    }
+
+    .title {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .paragraph {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .date {
+        grid-area: 2 / 1 / 3 / 3;
+        text-align: right;
+        border-left: none;
+        border-top: 2px solid rgba(62, 62, 62, 0.3);
+        padding-top: 1rem;
+    }
+
+    .header-container h2 {
+        font-size: 3rem;
+    }
+}
+
+/* Mobile breakpoint (max-width: 768px) */
+@media screen and (max-width: 48em) {
+    .reviews-container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .review-item {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+
+    .title {
+        grid-area: 1 / 1 / 2 / 2;
+        border-right: none;
+        border-bottom: 2px solid rgba(62, 62, 62, 0.3);
+        padding: 0 0 1rem 0;
+        text-align: center;
+    }
+
+    .paragraph {
+        grid-area: 2 / 1 / 3 / 2;
+        padding: 1rem 0;
+        border-bottom: 2px solid rgba(62, 62, 62, 0.3);
+    }
+
+    .date {
+        grid-area: 3 / 1 / 4 / 2;
+        text-align: center;
+        border-top: none;
+        padding-top: 1rem;
+    }
+
+    /*smaller text for mobile*/
+    .header-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-container h2 {
+        font-size: 2rem;
+    }
+
+    .reviews-container h3 {
+        font-size: 1.75rem;
+    }
+
+    .reviews-container h4 {
+        font-size: 1.25rem;
+    }
+
+    .reviews-container p {
+        font-size: 1rem;
+    }
 }
 
 </style>

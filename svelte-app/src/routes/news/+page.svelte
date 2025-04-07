@@ -34,8 +34,8 @@ let news = [...allNews];
 </script>
 <div class="overlay"></div> <!--Overlay over the page background creating subtle gradient-->
 <div class="header-container">  <!--Header with titles-->
-    <h1>News News and more News!</h1>
-    <h2>From Cinema to your screen.</h2>
+    <h1 class="reveal-text">News News and more News!</h1>
+    <h2 class="reveal-text">From Cinema to your screen.</h2>
 </div>
 
 {#if news.length > 0}
@@ -70,6 +70,23 @@ let news = [...allNews];
 	{/if}
 
 <style>
+
+.reveal-text {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: revealText 1s forwards ease-out;
+    }
+
+	@keyframes revealText {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 	    .overlay {  /*the gradient on the page background*/
         position: fixed;
         top: 0;
@@ -86,13 +103,10 @@ let news = [...allNews];
     .header-container h1{   /*Style for the main heading*/
         font-family: 'Pixelify Sans', sans-serif;
         font-optical-sizing: auto;
-        padding-top: 10%;
+        padding-top:5%;
         font-weight: 700;
         font-style: normal;
-        -webkit-text-stroke: 2px var(--news-color);
-        color: transparent;
-        transition: transform 0.3s ease;
-        animation: strokeTransition 2s ease-in-out infinite alternate;
+        color: var(--news-color);
     }
 
     
