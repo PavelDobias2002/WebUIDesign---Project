@@ -24,7 +24,7 @@ let allReviews = [
         content: 'a landmark in horror cinema. This silent film, loosely based on Dracula, introduces the unforgettable Count Orlok, played by Max Schreck, whose grotesque appearance and eerie performance have become iconic. The films use of shadows, distorted angles, and expressionist techniques creates a haunting atmosphere that lingers long after the credits roll. Murnaus masterful direction and Fritz Arno Wagners cinematography make Nosferatu a chilling, visually striking experience, and its influence on the horror genre is undeniable. Even after more than a century, it remains a terrifying and innovative classic.',
 		genre: 'horror',
 		director: 'Robert Eggers',
-        author: 'Pavel Dobias',
+        author: 'Eliska Vrzalova',
         date: '2024'
     },
     {
@@ -46,7 +46,7 @@ let allReviews = [
         "content": "A powerful drama starring Brendan Fraser as a reclusive English teacher who is struggling with obesity and trying to reconnect with his estranged daughter. The film is emotionally intense, with Fraser delivering a standout performance. While the story’s heaviness may be difficult for some, the film is a poignant exploration of redemption and self-worth.",
         "genre": "drama",
         "director": "Darren Aronofsky",
-        "author": "Samuel D. Hunter",
+        "author": "Jake Kelly",
         "date": "2022"
     },
     {
@@ -57,7 +57,7 @@ let allReviews = [
         "content": "A visually vibrant comedy that brings the iconic doll to life in a satirical exploration of gender, identity, and societal expectations. Margot Robbie shines in the lead role, and the film’s playful yet insightful humor tackles contemporary issues. While it may not be for everyone, *Barbie* is a fresh take on the traditional family film.",
         "genre": "comedy, fantasy",
         "director": "Greta Gerwig",
-        "author": "Greta Gerwig",
+        "author": "Pavel Dobias",
         "date": "2023"
     },
     {
@@ -68,7 +68,7 @@ let allReviews = [
         "content": "Christopher Nolan’s gripping World War II thriller, which chronicles the evacuation of British troops from Dunkirk, France. With minimal dialogue and a relentless sense of urgency, the film immerses viewers in the chaos and heroism of war. The impeccable cinematography, Hans Zimmer’s score, and stellar performances make *Dunkirk* a breathtaking cinematic experience.",
         "genre": "war, thriller",
         "director": "Christopher Nolan",
-        "author": "Christopher Nolan",
+        "author": "Eliska Vrzalova",
         "date": "2017"
     },
     {
@@ -79,7 +79,7 @@ let allReviews = [
         "content": "A groundbreaking animated superhero film that brings together multiple versions of Spider-Man from various dimensions. With stunning animation, a compelling storyline, and fantastic voice performances, *Into the Spider-Verse* revolutionized the genre and set a new standard for animated films. It’s a vibrant, emotional, and visually spectacular experience.",
         "genre": "animated, action",
         "director": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
-        "author": "Phil Lord, Rodney Rothman",
+        "author": "Jake Kelly",
         "date": "2018"
     },
     {
@@ -90,7 +90,7 @@ let allReviews = [
         "content": "A thought-provoking sci-fi romance that follows a man who develops a relationship with an artificial intelligence operating system. Directed by Spike Jonze, *Her* is a meditative exploration of loneliness, love, and human connection in a digital age. Joaquin Phoenix’s heartfelt performance, combined with the film’s beautiful visuals and score, makes this an unforgettable film.",
         "genre": "sci-fi, romance",
         "director": "Spike Jonze",
-        "author": "Spike Jonze",
+        "author": "Pavel Dobias",
         "date": "2013"
     },
     {
@@ -101,7 +101,7 @@ let allReviews = [
         "content": "A psychological thriller directed by Martin Scorsese, starring Leonardo DiCaprio as a U.S. Marshal investigating the disappearance of a patient from a mental institution on an isolated island. With a twisting narrative, eerie atmosphere, and a shocking climax, *Shutter Island* keeps viewers on the edge of their seats throughout.",
         "genre": "thriller, mystery",
         "director": "Martin Scorsese",
-        "author": "Dennis Lehane",
+        "author": "Jake Kelly",
         "date": "2010"
     },
     {
@@ -112,7 +112,7 @@ let allReviews = [
         "content": "An explosive, high-octane action film set in a dystopian wasteland, directed by George Miller. Tom Hardy stars as Max, who teams up with Imperator Furiosa (Charlize Theron) to escape a tyrannical warlord. With stunning practical effects, relentless action sequences, and a visually stunning world, *Mad Max: Fury Road* is a modern action classic.",
         "genre": "action, adventure",
         "director": "George Miller",
-        "author": "George Miller, Brendan McCarthy, Nico Lathouris",
+        "author": "Eliska Vrzalova",
         "date": "2015"
     }
 ];

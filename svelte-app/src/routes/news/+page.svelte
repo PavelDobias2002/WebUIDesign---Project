@@ -91,10 +91,10 @@ let news = [...allNews];
 {   /*Style for the main heading*/
     font-family: 'Pixelify Sans', sans-serif;
     font-optical-sizing: auto;
-    padding-top:5%;
     font-weight: 700;
     font-style: normal;
-    color: var(--news-color);
+    color: var(--news-color);   
+    padding-top:5%;
 }
 
 .reveal-text 
@@ -110,6 +110,8 @@ let news = [...allNews];
         opacity: 0;
         transform: translateY(50px);
     }
+ 
+
     100% {
         opacity: 1;
         transform: translateY(0);
