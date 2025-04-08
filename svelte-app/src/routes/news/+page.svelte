@@ -3,6 +3,9 @@ import { onMount } from 'svelte';
 
 import { scale } from 'svelte/transition';
 
+// import base to prefix local paths
+import { base } from '$app/paths';
+
 // data for each news
 let allNews = [
     {
@@ -72,14 +75,14 @@ let news = [...allNews];
 				<div class="news-article">
 
 					<div class="title">
-						<a href="/newsArticle">
+						<a href="{base}/newsArticle">
                             <h3>{news.title}</h3>
                             <h4>{news.subtitle}</h4>
                             </a>
 					</div>
 
 					<div class="paragraph">
-						<a href="/newsArticle">
+						<a href="{base}/newsArticle">
                             <p>{news.content}</p>
                             </a>
 					</div>

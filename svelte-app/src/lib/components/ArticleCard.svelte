@@ -2,7 +2,11 @@
     export let title = "article title";
     export let description = "Article description";
     export let image = "";
-    export let link = "#";
+    export let link = "{ base }#";
+
+  // import base to prefix local paths
+  import { base } from '$app/paths';
+
 </script>
 <div class="article-card" transition:scale >
     <img src={image} alt={title} class="article-image">

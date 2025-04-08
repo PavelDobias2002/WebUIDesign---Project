@@ -1,3 +1,8 @@
+<script>
+    // import base to prefix local paths
+    import { base } from '$app/paths';
+</script>
+
 <div class="overlay"></div> <!--Overlay over the page background creating subtle gradient-->
 <div class="header-container"> <!--Header with titles-->
     <h2>Nosferatu</h2>
@@ -12,7 +17,7 @@
             Did he pierced the audiances necks or was his frenzy bloodless? Find out more about the impact Nosferatu had on our childhoods.
     </p>
 
-    <img class="image" src='/nosferatu.png' alt="image of nosferatu from Spongebob episode">
+    <img class="image" src='{base}/nosferatu.png' alt="image of nosferatu from Spongebob episode">
 
     <p class="paragraph2">
         The Nosferatu frenzy took to the streets and we had to ask the fans what they think, in our Nosferatu Review we took the nostalgia as a factor in people perception of this movie. <br>
@@ -28,7 +33,7 @@
 
     </p>
 
-    <img class ="image2" src='/nigthmare.jpg' alt="image of nightmare before christmass movie">  
+    <img class ="image2" src='{base}/nigthmare.jpg' alt="image of nightmare before christmass movie">  
 
     <p class="paragraph4">
         We can go back as legendary as Tim Burtons The Nightamere Before Christmass, a movie targeting kids with its whipsicl animation and art style. But as many know having horror themes and adult centeret content. While marketed as a family-friendly film, The Nightmare Before Christmas incorporates various horror elements that might not be immediately apparent to young viewers.
@@ -42,11 +47,11 @@
 
     <nav class="news-nav">
         <ul>
-            <li><a href="/newsArticle">News1</a></li>
-            <li><a href="/newsArticle">News2</a></li>
-            <li><a href="/newsArticle">News3</a></li>
-            <li><a href="/newsArticle">News4</a></li>
-            <li><a href="/newsArticle">News5</a></li>
+            <li><a href="{base}/newsArticle">News1</a></li>
+            <li><a href="{base}/newsArticle">News2</a></li>
+            <li><a href="{base}/newsArticle">News3</a></li>
+            <li><a href="{base}/newsArticle">News4</a></li>
+            <li><a href="{base}/newsArticle">News5</a></li>
         </ul>
     </nav>
 

@@ -4,6 +4,10 @@
     onMount(() => {
         console.log("about page loaded");
     });
+
+    // import base to prefix local paths
+    import { base } from '$app/paths';
+
 </script>
 
 <div class="overlay"></div>
@@ -17,9 +21,9 @@
 </div>
 
 <div class="image-container">
-    <img src="/jake-kelly.png" alt="Jake Kelly" class="flex-image">
-    <img src="/eliska.png" alt="Eliska Vrzalova" class="flex-image">
-    <img src="/pavel.png" alt="Pavel Dobias" class="flex-image">
+    <img src="{base}/jake-kelly.png" alt="Jake Kelly" class="flex-image">
+    <img src="{base}/eliska.png" alt="Eliska Vrzalova" class="flex-image">
+    <img src="{base}/pavel.png" alt="Pavel Dobias" class="flex-image">
 </div>
 
 

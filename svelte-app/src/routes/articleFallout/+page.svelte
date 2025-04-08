@@ -1,3 +1,8 @@
+<script>
+    // import base to prefix local paths
+    import { base } from '$app/paths';
+</script>
+
 <div class="overlay"></div>
 <div class="page-container">
         <div class="article-content">
@@ -23,15 +28,15 @@
 
     <div class="image-grid">
         <div class="image small-image">
-            <img src='/fallout.jpg' alt="NCR from Fallout on Prime">
+            <img src='{base}/fallout.jpg' alt="NCR from Fallout on Prime">
         </div>
 
         <div class="image small-image">
-            <img src='/fallout-s2.png' alt="Leaked NCR Power Armour">
+            <img src='{base}/fallout-s2.png' alt="Leaked NCR Power Armour">
         </div>
 
         <div class="image large-image">
-            <img src='/new-vegas.jpg' alt="Fallout promotional image">
+            <img src='{base}/new-vegas.jpg' alt="Fallout promotional image">
         </div>
     </div>
 

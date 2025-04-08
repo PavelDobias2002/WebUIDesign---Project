@@ -8,6 +8,9 @@
 
     let movieContainer;
     let movies = [];
+
+    // import base to prefix local paths
+    import { base } from '$app/paths';
     
     onMount(() => {
         console.log("home page loaded");
@@ -128,7 +131,7 @@
 <div class="parallax-container">
     <div class="card-backdrop"></div>
     <div class="card-menu" bind:this={cardContainer}>
-        <a href='/news' class="news-card-link">
+        <a href='{base}/news' class="news-card-link">
         <Card2 title="News" description="Real talk on what’s hot (and what’s not)!" image="./news_icon.png"/> </a>
         <Card2 title="Articles" description="Dive into fun reads with fresh takes." image="./articles_icon.png"/>
         <Card2 title="Reviews" description="Stay in the loop with the latest buzz!" image="./reviews_icon.png"/>
@@ -137,7 +140,7 @@
 
 <div class="suggest-content-container">
     <div class="suggest-button">
-        <a href="/suggestContent">
+        <a href="{base}/suggestContent">
         <button type="button">
             <h3>Suggest us new content!</h3>
             <span class="arrow-icon">▼</span>
@@ -158,16 +161,16 @@
 <h2 class="reveal-text">What's Coming to Theaters This Month</h2>
 </div>
 <div class="cinema-news" bind:this ={movieContainer}>
-    <a href="/Mickey17" class="mickey17-link">
+    <a href="{base}/Mickey17" class="mickey17-link">
     <Card title="Mickey 17" description="On a mission to survive the impossible!" image="./Mickey_17.jpg"/>
 </a>
-    <a href="/AMinecraftMovie" class="minecraft-link">
+    <a href="{base}/AMinecraftMovie" class="minecraft-link">
     <Card title="A Minecraft Movie" description="Block by block, adventure awaits!" image="./a_minecraft_movie.jpg"/>
 </a>
-    <a href="/TheAltoKings" class="altokings-link">
+    <a href="{base}/TheAltoKings" class="altokings-link">
     <Card title="The Alto Knights" description="Starring legendary Robert De Niro" image="./the_alto_kings.jpg"/>
     </a>
-    <a href="/TheMonkey" class="monkey-link">
+    <a href="{base}/TheMonkey" class="monkey-link">
     <Card title="The Monkey" description="Based on Stephen King's 1980 story" image="./the_monkey.jpg"/>
 </a>
     <!--<a href="/BridgetJones" class="bridget-link">

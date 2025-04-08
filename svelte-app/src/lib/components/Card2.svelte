@@ -2,7 +2,10 @@
     // Props allow customization of card title and description
     export let title = "Card Title";
     export let description = "This is a brief description of the card. ";
-    export let image = "/default-placeholder.jpg";
+    export let image = "{base}/default-placeholder.jpg";
+
+    // import base to prefix local paths
+    import { base } from '$app/paths';
  </script>
 
  <!-- Card2 container-->

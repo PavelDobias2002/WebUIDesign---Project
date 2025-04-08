@@ -26,6 +26,10 @@
             message: ''
         };
     }
+
+    // import base to prefix local paths
+    import { base } from '$app/paths';
+
 </script>
 <div class="header"><h1>Contact us</h1></div>
 <div class="form-container">
@@ -96,7 +100,7 @@
 <div class="modal">
     <div class="modal-content">
         <h3>Thank you for your submission!</h3>
-        <img src="/logo.gif" alt="No Signal Media logo">
+        <img src="{base}/logo.gif" alt="No Signal Media logo">
         <button on:click={closeModal} class="close-modal">Close</button>
     </div>
 </div>

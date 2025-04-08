@@ -1,6 +1,9 @@
 <script>
     let isOpen = false; // Menu state (open/closed)
-    </script>
+
+    // import base to prefix local paths
+    import { base } from '$app/paths';
+</script>
     
     <nav class="nav">
         <button class="burger" on:click={() => isOpen = !isOpen} aria-label="Toggle navigation">
@@ -8,16 +11,16 @@
         </button>
     
         <div class="home-logo">
-            <li><a href="/"><img src="/logo.png" alt="Website Logo"></a></li>
+            <li><a href="{base}/"><img src="/logo.png" alt="Website Logo"></a></li>
         </div>
     
         <ul class:open={isOpen}>
-            <li><a href="/news" data-text="News" class="link-news">News</a></li>
-            <li><a href="/articles" data-text="Articles" class="link-articles">Articles</a></li>
+            <li><a href="{base}/news" data-text="News" class="link-news">News</a></li>
+            <li><a href="{base}/articles" data-text="Articles" class="link-articles">Articles</a></li>
             <li class="logo-spacer"></li>
             <li class="logo-spacer2"></li>
-            <li><a href="/reviews" data-text="Reviews" class="link-reviews">Reviews</a></li>
-            <li><a href="/about" data-text="About" class="link-about">About</a></li>
+            <li><a href="{base}/reviews" data-text="Reviews" class="link-reviews">Reviews</a></li>
+            <li><a href="{base}/about" data-text="About" class="link-about">About</a></li>
         </ul>
     </nav>
     
