@@ -23,9 +23,9 @@
            /*card2 styling*/
     /* Card container with smooth hover effects */
     .card2 {
-        background: white;
+        /*background: white;*/
         border-radius: 10px; /* Rounded corners */
-        border: 2px solid #000000;
+        /*border: 2px solid #000000;*/
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         overflow: hidden;
         width: 250px;
@@ -49,6 +49,7 @@
 
     /* Title Styling */
     .content2 h2 {
+        color: black;
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
     }

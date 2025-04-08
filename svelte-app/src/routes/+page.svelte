@@ -131,10 +131,9 @@
 <div class="parallax-container">
     <div class="card-backdrop"></div>
     <div class="card-menu" bind:this={cardContainer}>
-        <a href='{base}/news' class="news-card-link">
-        <Card2 title="News" description="Real talk on what’s hot (and what’s not)!" image="./news_icon.png"/> </a>
-        <Card2 title="Articles" description="Dive into fun reads with fresh takes." image="./articles_icon.png"/>
-        <Card2 title="Reviews" description="Stay in the loop with the latest buzz!" image="./reviews_icon.png"/>
+        <a href = "{base}/news" class="news-card-link"><Card2 title="News" description="Real talk on what’s hot (and what’s not)!" image="./news_icon.png"/></a>
+        <a href = "{base}/articles" class="articles-card-link"><Card2 title="Articles" description="Dive into fun reads with fresh takes." image="./articles_icon.png"/></a>
+        <a href = "{base}/reviews" class="reviews-card-link"><Card2 title="Reviews" description="Stay in the loop with the latest buzz!" image="./reviews_icon.png"/></a>
     </div>
 </div>
 
@@ -435,7 +434,7 @@
     }
     
     
-    :global(.card-menu > .news-card-link:first-child > .card2:first-child)
+    :global(.card-menu > .card2:first-child)
     {
         background-color: var(--news-color);
     }
@@ -448,6 +447,23 @@
     {
         background-color: var(--reviews-color);
     }
+
+    .news-card-link{
+        background-color: var(--news-color);
+        border-radius: 15px;
+    }
+
+    .articles-card-link{
+        background-color: var(--articles-color);
+        border-radius: 15px;
+    }
+
+    .reviews-card-link
+    {
+        background-color: var(--reviews-color);
+        border-radius: 15px;
+    }
+
     .movie-calendar{
         background-color:rgba(255, 255, 255,0.6);
         border-radius:50px;
