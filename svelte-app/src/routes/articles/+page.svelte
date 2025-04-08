@@ -15,26 +15,26 @@
         {
             title: "Return to Hyrule!",
             description: "Watch Link adventure to theatres on March 26th 2027!",
-            image: "{base}zelda.jpg",
-            link: "{base}/articleFallout"
+            image: `${base}/zelda.jpg`,
+            link: `${base}/articleFallout`
         },
         {
             title: "Tron:Ares and it's Soundtrack",
             description: "Could Tron:Ares revive the legendary music duo Daft Punk?",
-            image: "{base}daft-punk.jpg",
-            link: "{base}/articleFallout"
+            image: `${base}/daft-punk.jpg`,
+            link: `${base}/articleFallout`
         },
         {
             title: "Live-action or Animated?",
             description: "Fans are spilt between Mojang's decision for a live-action Minecraft movie.",
-            image: "{base}mc-movie.png",
-            link: "{base}/articleFallout"
+            image: `${base}/mc-movie.png`,
+            link: `${base}/articleFallout`
         },
         {
             title: "Roll-Out to the Fallout!",
             description: "Amazon Prime's Fallout is gearing up for it's 2nd Season!",
-            image: "{base}fallout.jpg",
-            link: "{base}/articleFallout"
+            image: `${base}/fallout.jpg`,
+            link: `${base}/articleFallout`
         }
     ];
 </script>

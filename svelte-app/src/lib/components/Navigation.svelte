@@ -11,7 +11,7 @@
         </button>
     
         <div class="home-logo">
-            <li><a href="{base}/"><img src="/logo.png" alt="Website Logo"></a></li>
+            <li><a href="{base}/"><img src="{base}/logo.png" alt="Website Logo"></a></li>
         </div>
     
         <ul class:open={isOpen}>

@@ -1,5 +1,6 @@
 <script>
-
+	// import base to prefix local paths
+    import { base } from '$app/paths';
 </script>
 <div class="overlay"></div>
 <div class="header-container">
@@ -8,7 +9,7 @@
 
 <div class="movie-container">
 	<div class="image">
-		<img src='/a_minecraft_movie.jpg' alt="A Minecraft Movie movie poster">
+		<img src='{base}/a_minecraft_movie.jpg' alt="A Minecraft Movie movie poster">
 	</div>
 	<div class="title">
 		<h3>A Minecraft Movie</h3>
@@ -50,7 +51,7 @@
 	</div>
 	<div class="trailer">
 		<h3>trailer</h3>
-		<iframe src="https://www.youtube.com/embed/wJO_vIDZn-I?si=WSIFNRfCq06Bl19P"
+		<iframe src='https://www.youtube.com/embed/wJO_vIDZn-I?si=WSIFNRfCq06Bl19P'
 		title="A Minecraft Movie trailer"
 		frameborder="0" 
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

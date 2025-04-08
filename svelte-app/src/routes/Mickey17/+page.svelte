@@ -51,7 +51,7 @@ import { base } from '$app/paths';
 	</div>
 	<div class="trailer">
 		<h3>trailer</h3>
-		<iframe src="{base}https://www.youtube.com/embed/osYpGSz_0i4?si=raKvz4ESw3Wj_jml"
+		<iframe src="https://www.youtube.com/embed/osYpGSz_0i4?si=raKvz4ESw3Wj_jml"
 			title="Mickey 17 trailer"
 			frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

@@ -48,7 +48,7 @@
 	</div>
 	<div class="trailer">
 		<h3>trailer</h3>
-		<iframe src="{base}https://www.youtube.com/embed/AZr9lYz12jw?si=2hX6pZXmhuReEsVM"
+		<iframe src="https://www.youtube.com/embed/AZr9lYz12jw?si=2hX6pZXmhuReEsVM"
 		title="Bridget Jones trailer"
 		frameborder="0" 
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

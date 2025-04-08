@@ -10,7 +10,7 @@ import { base } from '$app/paths';
 let allReviews = [
     {
         id: 1,
-		image: `${base}nigthmarePoster.jpg`,
+		image: `${base}/nigthmarePoster.jpg`,
         title: 'Nightmare Before Christmass',
         rating: 9,
         content: 'Tim Burton’s The Nightmare Before Christmas (1993) is a unique blend of dark gothic aesthetics and whimsical fairytale charm. The film follows Jack Skellington, the Pumpkin King of Halloween Town, who discovers Christmas Town and decides to bring holiday cheer—though with a spooky twist.',
@@ -21,7 +21,7 @@ let allReviews = [
     },
     {
         id: 2,
-		image: `${base}nosferatuPoster.jpg`,
+		image: `${base}/nosferatuPoster.jpg`,
         title: 'Nosferatu',
         rating: 7,
         content: 'a landmark in horror cinema. This silent film, loosely based on Dracula, introduces the unforgettable Count Orlok, played by Max Schreck, whose grotesque appearance and eerie performance have become iconic. The films use of shadows, distorted angles, and expressionist techniques creates a haunting atmosphere that lingers long after the credits roll. Murnaus masterful direction and Fritz Arno Wagners cinematography make Nosferatu a chilling, visually striking experience, and its influence on the horror genre is undeniable. Even after more than a century, it remains a terrifying and innovative classic.',
@@ -32,7 +32,7 @@ let allReviews = [
     },
     {
         id: 3,
-		image: `${base}mickey17poster.jpg`,
+		image: `${base}/mickey17poster.jpg`,
         title: 'Mickey 17',
         rating: 9,
         content: 'a sci-fi film starring Robert Pattinson as Mickey Barnes, an "Expendable" worker on a distant planet who faces repeated deaths and rebirths. The film blends dark humor with themes of corporate exploitation and cloning. Critics have praised Pattinson’s performance, but the narrative is seen as uneven. While some find it a quirky, inventive film, others criticize its meandering plot and tonal inconsistencies. Overall, Mickey 17 is a unique and thought-provoking experience, though its complexity may not be for everyone.',
@@ -43,7 +43,7 @@ let allReviews = [
     },
     {
         "id": 4,
-        "image": `${base}thewhaleposter.jpg`,
+        "image": `${base}/thewhaleposter.jpg`,
         "title": "The Whale",
         "rating": 8,
         "content": "A powerful drama starring Brendan Fraser as a reclusive English teacher who is struggling with obesity and trying to reconnect with his estranged daughter. The film is emotionally intense, with Fraser delivering a standout performance. While the story’s heaviness may be difficult for some, the film is a poignant exploration of redemption and self-worth.",
@@ -54,7 +54,7 @@ let allReviews = [
     },
     {
         "id": 5,
-        "image": `${base}barbieposter.jpg`,
+        "image": `${base}/barbieposter.jpg`,
         "title": "Barbie",
         "rating": 7,
         "content": "A visually vibrant comedy that brings the iconic doll to life in a satirical exploration of gender, identity, and societal expectations. Margot Robbie shines in the lead role, and the film’s playful yet insightful humor tackles contemporary issues. While it may not be for everyone, *Barbie* is a fresh take on the traditional family film.",
@@ -65,7 +65,7 @@ let allReviews = [
     },
     {
         "id": 6,
-        "image": `${base}dunkirkposter.jpg`,
+        "image": `${base}/dunkirkposter.jpg`,
         "title": "Dunkirk",
         "rating": 9,
         "content": "Christopher Nolan’s gripping World War II thriller, which chronicles the evacuation of British troops from Dunkirk, France. With minimal dialogue and a relentless sense of urgency, the film immerses viewers in the chaos and heroism of war. The impeccable cinematography, Hans Zimmer’s score, and stellar performances make *Dunkirk* a breathtaking cinematic experience.",

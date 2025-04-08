@@ -47,7 +47,7 @@ import { base } from '$app/paths';
 	</div>
 	<div class="trailer">
 		<h3>trailer</h3>
-		<iframe src="{base}https://www.youtube.com/embed/1aayuOp0AnE?si=tqPXLA3rEoCbAo-p"
+		<iframe src="https://www.youtube.com/embed/1aayuOp0AnE?si=tqPXLA3rEoCbAo-p"
 		title="The Alto Kings trailer"
 		frameborder="0" 
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
