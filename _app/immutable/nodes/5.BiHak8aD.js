@@ -1,0 +1,13 @@
+import{t as g,b as f}from"../chunks/vcxMryGl.js";import"../chunks/BVYbBEgZ.js";import{a5 as a,a6 as q,a8 as i,a9 as e}from"../chunks/DVLNnBa2.js";import{s as o}from"../chunks/BQGmOVMA.js";import{b as l}from"../chunks/CFfmGb5e.js";var b=g(`<div class="overlay svelte-3s10tm"></div> <div class="page-container svelte-3s10tm"><div class="article-content svelte-3s10tm"><h1 class="svelte-3s10tm">Fallout</h1> <p class="svelte-3s10tm">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p class="svelte-3s10tm">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p class="svelte-3s10tm">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                 sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div> <div class="image-grid svelte-3s10tm"><div class="image small-image svelte-3s10tm"><img alt="NCR from Fallout on Prime" class="svelte-3s10tm"></div> <div class="image small-image svelte-3s10tm"><img alt="Leaked NCR Power Armour" class="svelte-3s10tm"></div> <div class="image large-image svelte-3s10tm"><img alt="Fallout promotional image" class="svelte-3s10tm"></div></div></div>`,1);function E(d){var r=b(),m=a(q(r),2),u=a(i(m),2),t=i(u),c=i(t);o(c,"src",`${l??""}/fallout.jpg`),e(t);var s=a(t,2),p=i(s);o(p,"src",`${l??""}/fallout-s2.png`),e(s);var n=a(s,2),v=i(n);o(v,"src",`${l??""}/new-vegas.jpg`),e(n),e(u),e(m),f(d,r)}export{E as component};
