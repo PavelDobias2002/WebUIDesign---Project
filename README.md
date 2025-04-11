@@ -84,7 +84,7 @@ Good landing page and consistent pages brought the page together, creating a coh
 - <b>Pavel:</b><br>
 Make backups while building the website and prepare the website for github pages deployment from the start.<br>
 Creating a design and layout to follow from the start goes far in development.
-- <b>Eliska: Creae proper design and wireframes before the development phase. Improve code structure for later responsivness</b><br>
+- <b>Eliska:</b><br> Create proper design and wireframes before the development phase. Improve code structure for later responsivness<br>
 - <b>Jake:</b><br>
 
 <i>Praise the Omnnissiah</i>
