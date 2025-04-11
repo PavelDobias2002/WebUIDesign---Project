@@ -57,7 +57,15 @@ creating website without it. I have worked on:
 - News Article
 - Reviews with search function<br>
 I enjoyed creating the layout and design of each page, following the color pallete of No Signal Media while focusing on easy to use layout.
-#### Eliska:
+#### Eliska:<br>
+Starting the website was diffucult because of our designs that were lacking precision and clear ideas. Overall the development went well and we managed to agree on layouts and create nice and consistent website. Pages and features I have worked on:
+- Home page
+- Movies in theaters pages
+- suggest new content page
+- navigation bar
+- card and card2 components
+- responsive code for everything I did <br>
+I enjoyed this project so much. I learned so many things and I definitely want to learn more and pursue this in the future.
 #### Jake:
 Working with the tools provided, proved to be an enlightening experience. Putting the skills taught to use was both frustrating and a rewarding experience, I have work on:
 - Articles
@@ -77,10 +85,12 @@ Good landing page and consistent pages brought the page together, creating a coh
 18. <b>What could be improved:</b><br>
 
 19. <b>Suggestions for future development</b><br>
-- Pavel:<br>
+- <b>Pavel:</b><br>
 Make backups while building the website and prepare the website for github pages deployment from the start.<br>
 Creating a design and layout to follow from the start goes far in development.
-- Eliska:<br>
-- Jake:<br>
+- <b>Eliska:</b><br>
+ Create proper design and wireframes before the development phase. Improve code structure for later responsivness<br>
+- <b>Jake:</b><br>
 Creating standards and clear set guidelines going into the coding phase, possibly with a high fidelity prototype.<br>
+
 <i>Praise the Omnnissiah</i>
