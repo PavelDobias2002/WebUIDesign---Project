@@ -59,6 +59,10 @@ creating website without it. I have worked on:
 I enjoyed creating the layout and design of each page, following the color pallete of No Signal Media while focusing on easy to use layout.
 #### Eliska:
 #### Jake:
+Working with the tools provided, proved to be an enlightening experience. Putting the skills taught to use was both frustrating and a rewarding experience, I have work on:
+- Articles
+- Articles Information
+- About No Signal Media
 
 ### Deployment Notes
 15. <b>Github pages:</b> https://paveldobias2002.github.io/WebUIDesign---Project/
@@ -78,5 +82,5 @@ Make backups while building the website and prepare the website for github pages
 Creating a design and layout to follow from the start goes far in development.
 - Eliska:<br>
 - Jake:<br>
-
+Creating standards and clear set guidelines going into the coding phase, possibly with a high fidelity prototype.<br>
 <i>Praise the Omnnissiah</i>
