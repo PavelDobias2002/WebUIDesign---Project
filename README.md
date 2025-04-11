@@ -5,8 +5,8 @@ Praise the Omnnissiah
 ## Web User Interface Design Project
 
 ### Project Title and Summary
-1. No Signal Media
-2. A website centered around movies and content relevant to them, bringing News, Reviews and Articles to fans of all ages.
+1. <b>Name of the website:</b> <br> No Signal Media
+2. <b>Purpose:</b> A website centered around movies and content relevant to them, bringing News, Reviews and Articles to fans of all ages.
 3. Focused on movie fans, but also for anyone interested in movies and wants to learn more about them.
 4. https://paveldobias2002.github.io/WebUIDesign---Project/
 
