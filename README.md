@@ -55,7 +55,7 @@ Working with Svelte seemed daunting at first, but after familiarizing myself wit
 creating website without it. I have worked on:
 - News
 - News Article
-- Reviews with search function
+- Reviews with search function<br>
 I enjoyed creating the layout and design of each page, following the color pallete of No Signal Media while focusing on easy to use layout.
 #### Eliska:
 #### Jake:
